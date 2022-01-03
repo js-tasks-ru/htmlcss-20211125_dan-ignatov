@@ -1,4 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Ваше решение -->
+
+<style>
+    /* * {
+        margin: 0;
+    } */
+
+    body {
+        margin: 0;
+        color: white;
+    }
+
+    a:link {
+        color: white
+    }
+
+    header > h1 {
+        background-color: red;
+        margin: 0;
+        text-align: center;
+    }
+
+    header > nav {
+        background-color: darkorange;
+        text-align: center; /* TODO: flex/grid ??? */
+        padding: 10px;
+    }
+
+    main {
+        background-color: green;
+        margin: 0;
+        padding: 10px;
+    }
+
+    main > article {
+        background-color: royalblue;
+        margin: 0 0 5px 0;
+        padding: 20px 0 20px 10px;
+    }
+
+    main > article > h2 {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    main > article > ul {
+        /*
+        it's cool that browsers/readers understand what a content means better
+        but it's very difficult to find why there is that f.d empty space
+        and I em sure that this 'margin: 0;' is not the last thing in this quest
+        answer: reset.css/normalize.css - next lesson.
+        */
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    main > article > ol {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    footer {
+        background-color: darkorchid;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <!-- There are several kinds of content: https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content -->
+    <header>
+        <!-- There are special processing code in browsers and screen readers for the 'header' tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header -->
+        <h1>
+            <!-- Usage notes for 'h1' to 'h6' (avoid skipping): https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements -->
+            Header
+        </h1>
+        <nav>
+            <!-- There are special processing code in browsers and screen readers for the 'nav' tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+            <a href="#">Navigation 1</a>
+            <a href="#">Navigation 2</a>
+            <a href="#">Navigation 3</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Should be unique and there are more requirements:
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main 
+            http://blog.teamtreehouse.com/use-html5-sectioning-elements
+        -->
+        <article>
+            <!-- How it is recommented to be used: https://html.spec.whatwg.org/multipage/sections.html#the-article-element -->
+            <h2>Article 1</h2>
+            <ul>
+                <li>Оригинальная трилогия</li>
+                <li>Трилогия приквелов</li>
+                <li>Трилогия сиквелов</li>
+            </ul>
+        </article>
+        <article>
+            <h2>Article 2</h2>
+            <ol>
+                <li>Эпизод IV — Новая надежда</li>
+                <li>Эпизод V — Империя наносит ответный удар</li>
+                <li>Эпизод VI — Возвращение джедая</li>
+            </ol>
+        </article>
+    </main>
+    <footer>Footer</footer>
+</body>
+
 </html>
