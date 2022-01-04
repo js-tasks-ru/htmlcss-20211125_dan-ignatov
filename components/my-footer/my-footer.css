@@ -5,7 +5,7 @@
 }
 
 .my-footer__about {
-    /* TODO: Ask designer - It seems to be aligned by center, but there are 682px/674px in figma. */
+    /* TODO: Ask designer - It seems to be aligned to center, but there are 682px/674px in figma. */
     text-align: center;
 
     /* h2 - From Figma so I used it in markup */
@@ -15,8 +15,7 @@
     font-size: 38px;
     line-height: 48px;
 
-    /* TODO: change to global var - Black */
-    color: #212429;
+    color: var(--black);
 
     /*
         Override <h2> margin: '<h2>' declares what is its content.
@@ -35,8 +34,7 @@
 
     text-align: center;
 
-    /* TODO: change to global var - Black */
-    color: #212429;
+    color: var(--black);
 
     /* TODO: I used 32px to implement spacing between title and content for now. Can be changed later. */
     margin-top: 32px;
