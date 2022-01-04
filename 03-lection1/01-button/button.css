@@ -1,1 +1,76 @@
-/* Стилизация кнопки */
+/* Button internals are complex:
+    - https://css-tricks.com/overriding-default-button-styles/
+    - https://css-tricks.com/use-button-element/
+*/
+
+/* Стилизация кнопки v1: <div role="button" /> - keyboard/touch handlers? form submit? special devices? anything else? */
+
+/* Стилизация кнопки v2*/
+.button {
+    /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/unset
+        IE doesn't support it - it's ok
+        TODO: there are 'inherited/initial' in description?
+    */
+    all: unset;
+
+    /* Explicit enumeration v1:
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    */
+
+    /* Explicit enumeration v2:
+    background-color: transparent;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; 
+    */
+
+    border-radius: 8px;
+    width: 189px;
+    height: 48px;
+    /* TODO: use global var - background: var(--blue); */
+    background: #4263EB;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/*
+    TODO: ask designer - 
+    - there is no design for .button:focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+    - there is no design for .button:active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+    - there is no design for .button:default (?) - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
+    - there is no design for .button[disabled]:hover (?)
+*/
+
+.button:hover,
+.button[hover_debug]
+{
+    background: #2342C0;
+}
+
+.button[disabled]
+{
+    background: #4263EB;
+    opacity: 0.5;
+    /*
+        TODO: how to mix background and foreground with their opacity ?
+        https://stackoverflow.com/questions/52992900/how-to-blend-two-rgb-colors-front-and-back-based-on-their-alpha-channels
+    */
+    /* color: rgba(66, 99, 235, 0.25) */
+    color: white;
+}
