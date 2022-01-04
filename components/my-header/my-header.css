@@ -1,0 +1,23 @@
+.my-header {
+    /*
+        TODO: I used 160px to shift 'my-header__title' from the left side of 'my-header'.
+        In future, this number can be changed for several components on the page at once.
+        But currently 'my-header' is the only component on the page
+        so I would prefer to implement the left spacing via the most simple approach.
+        I can change it later if it will be necessary.
+
+        TODO: Ask designer - 96px can be unusable for small/xsmall screens
+    */
+    padding: 96px 0 77px 160px;
+}
+
+/* 
+    Title text seems to be a separate entry inside the 'my-header' component: it has its own independent properties.
+*/
+.my-header__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 64px;
+}
