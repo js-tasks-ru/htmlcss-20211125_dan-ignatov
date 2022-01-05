@@ -35,7 +35,7 @@
     width: 189px;
     height: 48px;
     /* TODO: use global var - background: var(--blue); */
-    background: #4263EB;
+    background: var(--button-background);
 
     font-family: Roboto;
     font-style: normal;
@@ -46,7 +46,7 @@
 
     text-align: center;
 
-    color: #FFFFFF;
+    color: var(--button-color);
 
     transition: background 500ms ease-in-out;
     cursor: pointer;
@@ -68,12 +68,11 @@
 .button:hover,
 .button[hover_debug]
 {
-    background: #2342C0;
+    background: var(--button-background-hover);
 }
 
 .button[disabled]
 {
-    background: #4263EB;
     opacity: 0.5;
     /*
         TODO: how to mix background and foreground with their opacity ?

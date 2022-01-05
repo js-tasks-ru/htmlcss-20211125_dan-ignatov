@@ -17,6 +17,11 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --button-background: #4263EB;
+    --button-background-hover: #2342C0;
+    --button-color: #FFFFFF
+    
 }
 
 * {
