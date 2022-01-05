@@ -47,17 +47,23 @@
     text-align: center;
 
     color: #FFFFFF;
+
     transition: background 500ms ease-in-out;
     cursor: pointer;
 }
 
 /*
-    TODO: ask designer - 
+    TODO: ask designer - my 'unset:all' disabled visual effects for these scenes:
     - there is no design for .button:focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
     - there is no design for .button:active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
     - there is no design for .button:default (?) - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
     - there is no design for .button[disabled]:hover (?)
 */
+.button:focus,
+.button[focus_debug]
+{
+    border:black 1px solid;
+}
 
 .button:hover,
 .button[hover_debug]
