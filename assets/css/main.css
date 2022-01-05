@@ -20,11 +20,18 @@
 
     /*
         button colors
-        TODO: how support themes ?
+        TODO: Should 03-lection1-01-button include themes management?
     */
     --button-background: #4263EB;
     --button-background-hover: #2342C0;
     --button-color: #FFFFFF;
+    /*
+        TODO: how to conver HEX to RGB/RGBA in CSS at runtime?
+        https://sass-lang.com/documentation/modules#rgb ? - preprocessor, no runtime
+        color: rgba(var(--button-color), 0.5); ? - doesn't work
+        color: var(--button-color)88; ? - doesn't work
+        color: rgba(255, 255, 255, 0.5); ? - ok, but it requires RGB in decimals
+    */
     --button-color-disabled: #FFFFFF88;
     
 }

@@ -34,7 +34,6 @@
     border-radius: 8px;
     width: 189px;
     height: 48px;
-    /* TODO: use global var - background: var(--blue); */
     background: var(--button-background);
 
     font-family: Roboto;
@@ -74,13 +73,6 @@
 .button[disabled]
 {
     opacity: 0.5;
-    /*
-        TODO: how to conver HEX to RGB in CSS ?
-        https://sass-lang.com/documentation/modules#rgb ?
-        color: rgba(var(--button-color), 0.5); ?
-        color: var(--button-color)88; ?
-    */
-    /* color: rgba(255, 255, 255, 0.5); */
     color: var(--button-color-disabled);
     cursor: unset;
 }
