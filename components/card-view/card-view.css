@@ -1,6 +1,6 @@
 .card-view {
     padding: 68px 165px 92px var(--root-items-left-spacing);
-    background: #F9FAFC;
+    background: var(--card-view_background);
     height: 150px;
     border: 1px solid black;
 }

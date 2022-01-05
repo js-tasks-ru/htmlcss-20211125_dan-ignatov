@@ -23,6 +23,8 @@
         Looks like Extend/Inheritance in SASS.
     */
     --root-items-left-spacing: 165px;
+    
+    --card-view_background: #F9FAFC;
 }
 
 * {
