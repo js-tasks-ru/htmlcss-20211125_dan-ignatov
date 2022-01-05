@@ -1,5 +1,6 @@
 .card-view {
+    padding: 68px 165px 92px var(--root-items-left-spacing);
     background: #F9FAFC;
-    /* TODO: Ask designer - 165/68/92px can be unusable for small/xsmall screens */
-    padding: 68px 165px 92px 165px;
+    height: 150px;
+    border: 1px solid black;
 }

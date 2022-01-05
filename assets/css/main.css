@@ -17,6 +17,8 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --root-items-left-spacing: 165px;
 }
 
 * {
