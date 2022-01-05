@@ -64,7 +64,7 @@
     border:black 1px solid;
 }
 
-.button:hover,
+.button:hover:not(.button[disabled]),
 .button[hover_debug]
 {
     background: var(--button-background-hover);
