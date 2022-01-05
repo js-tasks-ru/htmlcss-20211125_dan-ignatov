@@ -4,34 +4,26 @@
     <head>
         <link rel="stylesheet" href="./assets/css/main.css">
 
-        <!--
-            I hav't selected the 'header', 'main', 'footer' or 'container' strings just to 
-            make it easier to navigate/find my components
-            by the unique strings 'my-header'/'my-content'/'my-footer'.
-
-            The 'header', 'main', 'footer' or 'container' words are very common words and widely used
-            which makes it harder to navigate to **my** header/content/footer components :)
-        -->
-        <link rel="stylesheet" href="./components/my-header/my-header.css">
-        <link rel="stylesheet" href="./components/my-footer/my-footer.css">
-        <link rel="stylesheet" href="./components/my-content/my-content.css">        
+        <link rel="stylesheet" href="./components/header/header.css">
+        <link rel="stylesheet" href="./components/footer/footer.css">
+        <link rel="stylesheet" href="./components/card-view/card-view.css">        
     </head>
     <body>
-        <header class="my-header">
-            <div class="my-header__title">
+        <header class="header">
+            <div class="header__title">
                 Reusable component library
             </div>
         </header>
         <main>
-            <div class="my-content">
-                <div style="text-align: center; height: 300px;">
+            <div class="card-view">
+                <div style="text-align: left; height: 300px; border: 1px solid black;">
                     dummy content
                 </div>
             </div>
         </main>
-        <footer class="my-footer">
-            <h2 class="my-footer__about">About</h2>
-            <p class="my-footer__about-content">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
+        <footer class="footer">
+            <h2 class="footer__about">About</h2>
+            <p class="footer__about-content">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
         </footer>
     </body>
 </html>

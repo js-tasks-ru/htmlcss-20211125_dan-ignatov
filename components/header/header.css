@@ -1,0 +1,14 @@
+.header {
+    /* TODO: Ask designer - 96px can be unusable for small/xsmall screens */
+    padding: 96px 0px 40px 160px;
+}
+
+/* Title text seems to be a separate entry: it has its own internal properties. */
+.header__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--black);
+}
