@@ -75,10 +75,12 @@
 {
     opacity: 0.5;
     /*
-        TODO: how to mix background and foreground with their opacity ?
-        https://stackoverflow.com/questions/52992900/how-to-blend-two-rgb-colors-front-and-back-based-on-their-alpha-channels
+        TODO: how to conver HEX to RGB in CSS ?
+        https://sass-lang.com/documentation/modules#rgb ?
+        color: rgba(var(--button-color), 0.5); ?
+        color: var(--button-color)88; ?
     */
-    /* color: rgba(66, 99, 235, 0.25) */
-    color: white;
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: var(--button-color-disabled);
     cursor: unset;
 }

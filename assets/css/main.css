@@ -18,9 +18,14 @@
     --primary: var(--blue);
     --secondary: var(--purple);
 
+    /*
+        button colors
+        TODO: how support themes ?
+    */
     --button-background: #4263EB;
     --button-background-hover: #2342C0;
-    --button-color: #FFFFFF
+    --button-color: #FFFFFF;
+    --button-color-disabled: #FFFFFF88;
     
 }
 
