@@ -18,6 +18,10 @@
     --primary: var(--blue);
     --secondary: var(--purple);
 
+    /*
+        Global var to explicitly declare relation between several UI elements.
+        Looks like Extend/Inheritance in SASS.
+    */
     --root-items-left-spacing: 165px;
 }
 
