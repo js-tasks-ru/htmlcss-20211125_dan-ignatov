@@ -2,5 +2,6 @@
     padding: 68px 165px 92px var(--root-items-left-spacing);
     background: var(--card-view_background);
     height: 150px;
-    border: 1px solid black;
+    border-top: 1px solid var(--grey-2);
+    border-bottom: 1px solid var(--grey-2);
 }
