@@ -1,2 +1,10 @@
 /* Стилизация аккордеона */
 .accordion {}
+
+.accordion > details > summary::-webkit-details-marker {
+    display: none
+}
+
+.accordion > details > summary {
+    list-style: none;
+}
