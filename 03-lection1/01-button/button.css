@@ -56,20 +56,6 @@
     cursor: unset;
 }
 
-/*
-    ask designer - my 'unset:all' disabled visual effects for these scenes:
-    - there is no design for .button:focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
-    - there is no design for .button:active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
-    - there is no design for .button:default (?) - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
-    - there is no design for .button[disabled]:hover (?)
-*/
-.button:focus,
-.button.focus_debug
-{
-    /* Note: border is used in 'alternative' */
-    border: red 5px dashed;
-}
-
 /* >>> defaults by modificators */
 
     .button_primary {
@@ -93,22 +79,34 @@
 
 /* >>> hover */
 
+    /*
+        The following scenes will be managed as 'hover':
+        - focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+        - active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+        And, I will not research 'default' - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
+    */
+
     .button_primary:hover:not(.button[disabled]),
+    .button_primary:active:not(.button[disabled]),
+    .button_primary:focus:not(.button[disabled]),
     .button_primary.hover_debug
     {
         background: var(--button_primary-background-hover);
     }
 
     .button_secondary:hover:not(.button[disabled]),
+    .button_secondary:active:not(.button[disabled]),
+    .button_secondary:focus:not(.button[disabled]),
     .button_secondary.hover_debug
     {
         background: var(--button_secondary-background-hover);
     }
 
     .button_alternate:hover:not(.button[disabled]),
+    .button_alternate:active:not(.button[disabled]),
+    .button_alternate:focus:not(.button[disabled]),
     .button_alternate.hover_debug
     {
-        background: var(--button_alternate-background-hover);
         border-color: var(--button_alternate-border-color-hover);
     }
 
