@@ -20,9 +20,6 @@
 
     /* button */
 
-    --button_focus-transition-duration: 500ms;
-    --button_focus-transition-timing-function: ease-in-out;
-
     /* button_primary */
 
     --button_primary-background: #4263EB; /* Marked as 'Blue' in Figma, but '--blue' is '#374FC7' in main.css */
