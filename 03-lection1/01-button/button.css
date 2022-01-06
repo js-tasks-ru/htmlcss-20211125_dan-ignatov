@@ -48,6 +48,8 @@
 
     cursor: pointer;
     box-sizing: border-box;
+
+    /* TODO: text overflow */
 }
 
 .button[disabled]
