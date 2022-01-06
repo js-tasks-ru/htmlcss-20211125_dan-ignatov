@@ -6,9 +6,25 @@
         <link rel="stylesheet" href="./button.css">
     </head>
     <body>
-        <button class="button">Default</button>
-        <button class="button" hover_debug>Hover</button>
-        <button class="button" focus_debug>Focus</button>
-        <button class="button" disabled>Disabled</button>
+        <div style="display: flex; flex-direction: row;">
+            <div style="padding: 10px; display: flex; flex-direction: column; row-gap: 10px;">
+                <button class="button button_primary">Default</button>
+                <button class="button button_primary hover_debug">hover_debug</button>
+                <button class="button button_primary focus_debug">focus_debug</button>
+                <button class="button button_primary" disabled>Disabled</button>
+            </div>
+            <div style="padding: 10px; display: flex; flex-direction: column; row-gap: 10px;">
+                <button class="button button_secondary">Default</button>
+                <button class="button button_secondary hover_debug">hover_debug</button>
+                <button class="button button_secondary focus_debug">focus_debug</button>
+                <button class="button button_secondary" disabled>Disabled</button>
+            </div>
+            <div style="padding: 10px; display: flex; flex-direction: column; row-gap: 10px;">
+                <button class="button button_alternate">Default</button>
+                <button class="button button_alternate hover_debug">hover_debug</button>
+                <button class="button button_alternate focus_debug">focus_debug</button>
+                <button class="button button_alternate" disabled>Disabled</button>
+            </div>
+        </div>
     </body>
 </html>

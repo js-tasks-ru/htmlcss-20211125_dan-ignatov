@@ -5,7 +5,7 @@
 
 /* Стилизация кнопки v1: <div role="button" /> - keyboard/touch handlers? form submit? special devices? anything else? */
 
-/* Стилизация кнопки v2*/
+/* Стилизация кнопки v2: <button> Btn </button> */
 .button {
     /* 
         https://developer.mozilla.org/en-US/docs/Web/CSS/unset
@@ -34,45 +34,102 @@
     border-radius: 8px;
     width: 189px;
     height: 48px;
-    background: var(--button-background);
-
+ 
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
 
     text-align: center;
 
-    color: var(--button-color);
-
     transition: background 500ms ease-in-out;
+    transition: border 500ms ease-in-out;
+
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+.button[disabled]
+{
+    cursor: unset;
 }
 
 /*
-    TODO: ask designer - my 'unset:all' disabled visual effects for these scenes:
+    ask designer - my 'unset:all' disabled visual effects for these scenes:
     - there is no design for .button:focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
     - there is no design for .button:active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
     - there is no design for .button:default (?) - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
     - there is no design for .button[disabled]:hover (?)
 */
 .button:focus,
-.button[focus_debug]
+.button.focus_debug
 {
-    border:black 1px solid;
+    /* Note: border is used in 'alternative' */
+    border: red 5px dashed;
 }
 
-.button:hover:not(.button[disabled]),
-.button[hover_debug]
-{
-    background: var(--button-background-hover);
-}
+/* >>> defaults by modificators */
 
-.button[disabled]
-{
-    opacity: 0.5;
-    color: var(--button-color-disabled);
-    cursor: unset;
-}
+    .button_primary {
+        color: var(--button_primary-color);
+        background: var(--button_primary-background);
+    }
+
+    .button_secondary {
+        color: var(--button_secondary-color);
+        background: var(--button_secondary-background);
+    }
+
+    .button_alternate {
+        border: 1px solid var(--button_alternate-border-color);
+        box-sizing: border-box;
+        color: var(--button_alternate-color);
+        background: var(--button_alternate-background);
+    }
+    
+/* <<< default by modificators */
+
+/* >>> hover */
+
+    .button_primary:hover:not(.button[disabled]),
+    .button_primary.hover_debug
+    {
+        background: var(--button_primary-background-hover);
+    }
+
+    .button_secondary:hover:not(.button[disabled]),
+    .button_secondary.hover_debug
+    {
+        background: var(--button_secondary-background-hover);
+    }
+
+    .button_alternate:hover:not(.button[disabled]),
+    .button_alternate.hover_debug
+    {
+        background: var(--button_alternate-background-hover);
+        border-color: var(--button_alternate-border-color-hover);
+    }
+
+/* <<< hover */
+
+/* >>> disabled */
+
+    .button_primary[disabled]
+    {
+        opacity: 0.5;
+        color: var(--button_primary-color-disabled);
+    }
+
+    .button_secondary[disabled]
+    {
+        opacity: 0.5;
+        color: var(--button_secondary-color-disabled);
+    }
+
+    .button_alternate[disabled]
+    {
+        color: var(--button_alternate-border-color-disabled);
+    }
+
+/* <<< disabled */
