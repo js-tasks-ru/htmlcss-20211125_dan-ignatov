@@ -88,24 +88,21 @@
 
     .button_primary:hover:not(.button[disabled]),
     .button_primary:active:not(.button[disabled]),
-    .button_primary:focus:not(.button[disabled]),
-    .button_primary.hover_debug
+    .button_primary:focus:not(.button[disabled])
     {
         background: var(--button_primary-background-hover);
     }
 
     .button_secondary:hover:not(.button[disabled]),
     .button_secondary:active:not(.button[disabled]),
-    .button_secondary:focus:not(.button[disabled]),
-    .button_secondary.hover_debug
+    .button_secondary:focus:not(.button[disabled])
     {
         background: var(--button_secondary-background-hover);
     }
 
     .button_alternate:hover:not(.button[disabled]),
     .button_alternate:active:not(.button[disabled]),
-    .button_alternate:focus:not(.button[disabled]),
-    .button_alternate.hover_debug
+    .button_alternate:focus:not(.button[disabled])
     {
         border-color: var(--button_alternate-border-color-hover);
     }
