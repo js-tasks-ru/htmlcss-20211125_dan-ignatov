@@ -1,11 +1,12 @@
 .footer {
+    /* ask designer: should footer be aligned by the bottom of the page? */
     padding-top: 72px;
     padding-top: 136px;
     padding-bottom: 136px;
 }
 
 .footer__about {
-    /* TODO: Ask designer - It seems to be aligned to center, but there are 682px/674px in Figma. */
+    /* Ask designer - It seems to be aligned to center, but there are 682px/674px in Figma. */
     text-align: center;
 
     font-family: Inter;

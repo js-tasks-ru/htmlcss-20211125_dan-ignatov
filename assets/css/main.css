@@ -18,15 +18,15 @@
     --primary: var(--blue);
     --secondary: var(--purple);
 
-    /*
-        Global var to explicitly declare relation between several UI elements.
-        Looks like Extend/Inheritance in SASS.
-    */
-    --root-items-left-spacing: 165px;
-    
     --card-view_background: var(--grey-1);
 }
 
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+/* align roots v2:
+.align-page-roots {
+    max-width: 1110px;
+    margin: 0 auto;
+} */

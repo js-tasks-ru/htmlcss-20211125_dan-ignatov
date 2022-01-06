@@ -9,10 +9,8 @@
     font-size: 50px;
     line-height: 64px;
     color: var(--black);
-    padding-left: 160px;
 }
 
 .header__navigation {
     margin-top: 40px;
-    padding-left: var(--root-items-left-spacing);
 }
