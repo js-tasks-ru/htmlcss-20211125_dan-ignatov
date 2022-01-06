@@ -29,7 +29,7 @@
     line-height: 24px;
     /* or 150% */
 
-    /* TODO: Ask designer - Text looks like it is centered but it is not specified in Figma */
+    /* Ask designer - Text looks like it is centered but it is not specified in Figma */
     text-align: center;
 
     color: var(--black);
