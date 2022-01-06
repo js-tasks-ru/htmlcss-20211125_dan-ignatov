@@ -54,6 +54,7 @@
 .button[disabled]
 {
     cursor: unset;
+    opacity: 0.5;
 }
 
 /* >>> defaults by modificators */
@@ -112,19 +113,12 @@
 
     .button_primary[disabled]
     {
-        opacity: 0.5;
         color: var(--button_primary-color-disabled);
     }
 
     .button_secondary[disabled]
     {
-        opacity: 0.5;
         color: var(--button_secondary-color-disabled);
-    }
-
-    .button_alternate[disabled]
-    {
-        color: var(--button_alternate-border-color-disabled);
     }
 
 /* <<< disabled */

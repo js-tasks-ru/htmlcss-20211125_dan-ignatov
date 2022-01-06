@@ -46,7 +46,6 @@
     --button_alternate-background: #FFFFFF;
     --button_alternate-border-color: var(--grey-3); /* Gray 3 in Figma*/
     --button_alternate-border-color-hover: var(--black); /* Black in Figma*/        
-    --button_alternate-border-color-disabled: var(--grey-3); /* Gray 3 in Figma*/
     --button_alternate-color: var(--grey-4); /* Gray 4 in Figma*/
 }
 
