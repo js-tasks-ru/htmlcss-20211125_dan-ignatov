@@ -43,8 +43,7 @@
 
     text-align: center;
 
-    transition: background 500ms ease-in-out;
-    transition: border 500ms ease-in-out;
+    transition: background 500ms ease-in-out, border 500ms ease-in-out;
 
     cursor: pointer;
     box-sizing: border-box;
