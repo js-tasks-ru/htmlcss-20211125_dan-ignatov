@@ -3,24 +3,15 @@
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-.accordion > details {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 32px;
-    padding-right: 32px;
-
-    border: 1px solid #ACB5BD;
-    box-sizing: border-box;
-    border-radius: 8px;
-}
-
-/* >>> summary */
-
-    .accordion summary {
-        cursor: pointer;
-    }
+/* >>> clear default browser' paintings */
 
     .accordion > details > summary::-webkit-details-marker {
         display: none
@@ -30,24 +21,53 @@
         list-style: none;
     }
 
-    .accordion_summary {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+/* <<< clear default browser' paintings */
+
+/* >>> details */
+
+    .accordion > details {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 32px;
+        padding-right: 48px; /* 32(figma) + 16(svg width, used as negative margine) = 48 */
+
+        border: 1px solid var(--grey-3);
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        color: var(--grey-4);
     }
 
-    .accordion_summary-icon-collapsed {
-        width: 18px;
-        height: 10px;
+/* <<< details */
+
+/* >>> details > summary */
+
+    .accordion > details > summary {
+        margin-right: -16px;
+        cursor: pointer;
         
-        background-image: 
-            url("data:image/svg+xml;utf8,<svg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L9 9L17 1' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-        /*
-        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L9 9L17 1" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        */
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;        
+        align-items: center;
+
+        color: var(--black);
     }
 
-/* <<< summary */
+    .accordion > details > summary::after {
+        content: url("data:image/svg+xml;utf8,<svg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L9 9L17 1' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+    }
+
+    .accordion > details[open] > summary {
+        padding-bottom: 16px;
+    }
+    
+    .accordion > details[open] > summary::after {
+        transform: rotateX(180deg);
+    }
+
+/* <<< details > summary */
