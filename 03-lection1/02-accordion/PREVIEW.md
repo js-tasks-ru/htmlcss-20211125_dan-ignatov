@@ -1,6 +1,6 @@
 Preview:
 
-![image](https://user-images.githubusercontent.com/2094015/148612095-f6546959-6ce0-4a03-90eb-1d3c3f59e529.png)
+![image](https://user-images.githubusercontent.com/2094015/148613312-66107951-09ef-44b6-a53d-069f145d06d1.png)
 
 Live preview:
 
