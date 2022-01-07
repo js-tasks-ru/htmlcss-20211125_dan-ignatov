@@ -5,6 +5,7 @@ Preview:
 Live preview:
 
 - https://htmlpreview.github.io/?https://github.com/js-tasks-ru/htmlcss-20211125_dan-ignatov/blob/master/03-lection1/02-accordion/index.html
+- Or, https://htmlpreview.github.io/?https://github.com/IgnatovDan/htmlcss-20211125_dan-ignatov/blob/03-lection1-02-accordion/03-lection1/02-accordion/index.html
 
 Links:
 - [w3.org - CSS Box Model Module Level 3](https://www.w3.org/TR/css-box-3/)
