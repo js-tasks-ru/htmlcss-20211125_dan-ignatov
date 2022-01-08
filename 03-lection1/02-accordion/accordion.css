@@ -13,10 +13,17 @@
 
 /* >>> clear default browser' paintings */
 
+    /*
+        I will remove the embedded browser' visual element 'marker' from DOM tree
+        because it doesn't allow to modify its representation as in Figma:
+        - https://developer.mozilla.org/en-US/docs/Web/CSS/::marker
+        - https://www.w3.org/TR/css-pseudo-4/#selectordef-marker
+    */
     .accordion > details > summary::-webkit-details-marker {
         display: none
     }
 
+    /* And, I will override the embedded browser' styles for 'summary' element: */
     .accordion > details > summary {
         list-style: none;
     }
