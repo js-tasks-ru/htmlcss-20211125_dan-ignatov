@@ -2,7 +2,7 @@
 }
 
 .header__title {
-    margin-top: 96px;
+    margin-top: 20px;  /* 96px in Figma but it is too large and immediately force scrollbar in Main to be visible */
     font-family: Inter;
     font-style: normal;
     font-weight: 500;

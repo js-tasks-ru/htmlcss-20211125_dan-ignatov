@@ -1,8 +1,8 @@
 .footer {
     /* ask designer: should footer be aligned by the bottom of the page? */
     padding-top: 72px;
-    padding-top: 136px;
-    padding-bottom: 136px;
+    padding-top: 20px; /* 136px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+    padding-bottom: 0px; /* 136px in Figma but it is too large and immediately force scrollbar in Main to be visible */
 }
 
 .footer__about {
