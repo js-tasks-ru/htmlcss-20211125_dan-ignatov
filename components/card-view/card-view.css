@@ -1,7 +1,4 @@
 .card-view {
-    padding-top: 68px;
-    padding-bottom: 92px;
-    
     /* core properties */
     display:flex;
     flex-direction: row;
