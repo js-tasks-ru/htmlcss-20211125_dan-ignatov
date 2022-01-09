@@ -25,6 +25,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html,
+body {
+    height: 100%; /* stretch to entire page?view port? from top to bottom */
+}
+
+body {
+    /* avoid scrollview when body:height is 100% because default value is 8px */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* align roots v2:
 .align-page-roots {
     max-width: 1110px;
