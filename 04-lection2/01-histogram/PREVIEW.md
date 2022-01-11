@@ -18,6 +18,7 @@ So, even with 100% of OS scaling and 100% of browser scaling there will be few '
 
 Links:
 
+- [Flexbox - Resolving Flexible Lengths](https://www.w3.org/TR/css-flexbox/#resolve-flexible-lengths)
 - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1)
 - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2)
 - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
