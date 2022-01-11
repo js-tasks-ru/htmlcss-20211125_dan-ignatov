@@ -12,18 +12,21 @@
 
     background: var(--white);
 
+    /* children layout options */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .histogram__header {
+    /* children layout options */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .histogram__headerCaption {
+    /* children layout options */
     display: flex;
     flex-direction: column;
     row-gap: 6px;
@@ -51,13 +54,12 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 26px;
-    /* identical to box height, or 130% */
 
     color: var(--black);
 }
 
 .histogram__headerViewAllButton {
-    /* this element seems to be a <button> */
+    /* this element seems to be <button> so I used <button> in markup */
     all: unset;
     height: fit-content;
 
@@ -73,7 +75,17 @@
 }
 
 .histogram__values {
+    height: 50px;
+
+    /* children layout options */
     display: flex;
     flex-direction: row;
-    height: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: 1px;
+}
+
+.histogram__value {
+    background: #4263EB;
+    width: 100%;
 }
