@@ -14,7 +14,7 @@ These 'mistakes' occurs because browser calculates coordinates as 'float' and on
 Also, there can be OS scaling that do the same thing to meet scaled values with pixels of the target device.
 In my environment, there are 125% of OS scaling and 125% of browser scaling at once.
 
-So, even with 100% of OS scaling and 100% of browser scaling there will be few 2px gaps between bars because of rounding floating numbers to '1' or to '2'.
+So, even with 100% of OS scaling and 100% of browser scaling there will be few 'larger' gaps between bars because of rounding floating numbers to '1' or to '2'.
 
 Links:
 
