@@ -7,8 +7,52 @@
     border: 1px solid var(--grey-3);
     box-sizing: border-box;
     border-radius: 8px;
+
+    padding: 24px 40px 32px 24px;
 }
 
+.skeleton__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.skeleton__headerCircle {
+    width: 64px;
+    height: 64px;
+
+    background: var(--grey-2);
+    border-radius: 32px;
+}
+
+.skeleton__headerRects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 0 8px 8px;
+}
+
+.skeleton__main {
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 0 0 0;
+}
+
+.skeleton__rect {
+    width: 172px;
+    height: 20px;
+
+    background: var(--grey-2);
+}
+
+.skeleton__rect_long {
+    width: 257px;
+}
+
+.skeleton__rect_veryLong {
+    width: 515px;
+}
 
 /* ======================================================================= */
 /*                                                                         */

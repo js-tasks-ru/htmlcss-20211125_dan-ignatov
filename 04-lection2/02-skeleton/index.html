@@ -6,27 +6,29 @@
         <link rel="stylesheet" href="./skeleton.css">
     </head>
     <body>
-        <div class="skeleton">
-            <!--
-                https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#state_prop_def
+        <!--
+            https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#state_prop_def
 
-                aria-valuetext="Loading..."
-                role="progressbar"
-                aria-valuemin/aria-valuenow/aria-valuemax
-            -->
+            aria-valuetext="Loading..."
+            role="progressbar"
+            aria-valuemin/aria-valuenow/aria-valuemax
+        -->
+        <div class="skeleton">
             <div class="skeleton__header">
                 <div class="skeleton__headerCircle"></div>
-                <div class="skeleton__headerText">
-                    <div class="skeleton__textRect skeleton__textRect-small"></div>
-                    <div class="skeleton__textRect skeleton__textRect-middle"></div>
+                <div class="skeleton__headerRects">
+                    <div class="skeleton__rect"></div>
+                    <div class="skeleton__rect skeleton__rect_long"></div>
                 </div>
             </div>
             <div class="skeleton__main">
-                <div class="skeleton__textRect skeleton__textRect-long"></div>
-                <div class="skeleton__textRect skeleton__textRect-long"></div>
+                <div class="skeleton__rect skeleton__rect_veryLong"></div>
+                <div class="skeleton__rect skeleton__rect_veryLong"></div>
             </div>
         </div>
         
+        <div style="height: 20px"></div>
+
         <div class="skeletonCSS"></div>
     </body>
 </html>
