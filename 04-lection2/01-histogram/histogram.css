@@ -14,11 +14,62 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .histogram__header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.histogram__headerCaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.histogram__headerCaptionText {
+    all:unset; /* because of <p> from Figma */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--black);
+
+    opacity: 0.8;
+}
+
+.histogram__headerCaptionTotal {
+    all: unset; /* bacause of <h4> from Figma */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+
+    color: var(--black);
+}
+
+.histogram__headerViewAllButton {
+    /* this element seems to be a <button> */
+    all: unset;
+    height: fit-content;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: right;
+
+    color: var(--blue);
 }
 
 .histogram__values {
