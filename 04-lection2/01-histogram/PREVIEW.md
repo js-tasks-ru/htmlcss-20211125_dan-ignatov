@@ -1,3 +1,5 @@
+Live: [https://htmlpreview.github.io/?https://github.com/js-tasks-ru/htmlcss-20211125_dan-ignatov/blob/master/04-lection2/01-histogram/index.html](https://htmlpreview.github.io/?https://github.com/js-tasks-ru/htmlcss-20211125_dan-ignatov/blob/master/04-lection2/01-histogram/index.html)
+
 Preview 1:
 
 ![image](https://user-images.githubusercontent.com/2094015/148932600-bc91f28b-5014-4ecd-9344-8cc238de39cf.png)
