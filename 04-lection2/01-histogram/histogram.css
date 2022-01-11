@@ -1,0 +1,28 @@
+.histogram {
+    width: 354px;
+    height: 185px;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    background: var(--white);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.histogram__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.histogram__values {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
