@@ -27,7 +27,7 @@
         <script>
             /* Source values are from '0' to '1' */
             const values = [];
-            for(let i = 0; i < (15 + Math.random() * 10); i++) {
+            for(let i = 0; i < (30 + Math.random() * 5); i++) {
                 values.push(Math.random());
             }
 
@@ -35,7 +35,8 @@
             const chart1El = document.querySelector('#chart1 .histogram__values');
             values.forEach(value => {
                 const chartValueEl = document.createElement('div');
-                chartValueEl.textContent = value.toString();
+                chartValueEl.classList.add('histogram__value');
+                chartValueEl.style.height = Math.floor(value * 100) + '%';
                 chart1El.appendChild(chartValueEl);
             });
         </script>
