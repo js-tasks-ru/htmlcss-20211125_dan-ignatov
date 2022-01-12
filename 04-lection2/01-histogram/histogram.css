@@ -88,4 +88,5 @@
 .histogram__value {
     background: #4263EB;
     width: 100%;
+    height: calc(var(--value) * 100%);
 }

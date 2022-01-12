@@ -36,7 +36,8 @@
             values.forEach(value => {
                 const chartValueEl = document.createElement('div');
                 chartValueEl.classList.add('histogram__value');
-                chartValueEl.style.height = Math.floor(value * 100) + '%';
+                // chartValueEl.style.height = Math.floor(value * 100) + '%'; - use css variable instead to keep all the UI code in CSS
+                chartValueEl.style.setProperty('--value', value);
                 chart1El.appendChild(chartValueEl);
             });
         </script>
