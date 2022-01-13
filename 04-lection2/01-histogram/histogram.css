@@ -1,8 +1,5 @@
 .histogram {
-    padding-top: 16px;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    padding-left: 24px;
+    padding: 16px 24px 24px;
 
     border: 1px solid var(--grey-3);
     box-sizing: border-box;
