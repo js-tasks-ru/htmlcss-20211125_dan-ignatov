@@ -31,8 +31,6 @@
 }
 
 .histogram__headerCaptionText {
-    all:unset; /* because of <p> from Figma */
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -45,8 +43,6 @@
 }
 
 .histogram__headerCaptionTotal {
-    all: unset; /* bacause of <h4> from Figma */
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
