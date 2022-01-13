@@ -91,7 +91,7 @@
 }
 
 .histogram__value {
-    background: #4263EB;
-    width: 100%;
+    background: var(--blue);
+    flex-grow: 1;
     height: calc(var(--value) * 100%);
 }
