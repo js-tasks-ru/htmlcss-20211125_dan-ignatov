@@ -11,7 +11,6 @@
     line-height: 24px;
 
     --itemSummaryOpenCloseButtonWidth: 18px;
-    --accordionPaddings: 24px calc(32px + var(--itemSummaryOpenCloseButtonWidth)) 24px 32px;
     --itemSummaryToContentSpace: 16px;
 }
 
@@ -57,7 +56,7 @@
     */
 
     .accordion__item {
-        padding: var(--accordionPaddings);
+        padding: 24px 32px;
 
         border: 1px solid var(--grey-3);
         box-sizing: border-box;
@@ -71,20 +70,15 @@
 /* >>> accordion__itemSummary */
 
     .accordion__itemSummary {
-        /*
-            Я хочу сохранить возможность задания контента без декларации отдельного div.
-            Если отказаться от этой возможности, то можно сделать явный <div class="accordion__itemContent" 
-            с 'padding-right: var(--itemSummaryOpenCloseButtonWidth);'
-        */
-        margin-right: calc(0px - var(--itemSummaryOpenCloseButtonWidth));
         cursor: pointer;
         
+        color: var(--black);
+
+        /* Layout childred */
         display: flex;
         flex-flow: row;
         justify-content: space-between;        
         align-items: center;
-
-        color: var(--black);
     }
 
     .accordion__itemSummary::after {
@@ -111,3 +105,11 @@
     }
 
 /* <<< accordion__itemSummary */
+
+/* >>> accordion__itemContent */
+
+.accordion__itemContent {
+    padding-right: var(--itemSummaryOpenCloseButtonWidth);
+}
+
+/* <<< accordion__itemContent */
