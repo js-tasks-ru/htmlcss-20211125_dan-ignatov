@@ -5,32 +5,53 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./skeleton.css">
     </head>
-    <body>
-        <!--
-            https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#state_prop_def
+    <style>
+        /* I want to keep this layouting management in this file only */
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-            aria-valuetext="Loading..."
-            role="progressbar"
-            aria-valuemin/aria-valuenow/aria-valuemax
-        -->
-        Flex and Divs:
-        <div class="skeleton">
-            <div class="skeleton__header">
-                <div class="skeleton__headerCircle"></div>
-                <div class="skeleton__headerRects">
-                    <div class="skeleton__rect"></div>
-                    <div class="skeleton__rect skeleton__rect_long"></div>
+        section {
+            flex-grow: 1;
+            padding: 20px;
+            border: 1px dashed blue;
+        }
+    </style>
+    <body>
+        <section>
+            <!--
+                https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#state_prop_def
+
+                aria-valuetext="Loading..."
+                role="progressbar"
+                aria-valuemin/aria-valuenow/aria-valuemax
+            -->
+            Flex and Divs:
+            <div class="skeleton">
+                <div class="skeleton__header">
+                    <div class="skeleton__headerCircle"></div>
+                    <div class="skeleton__headerRects">
+                        <div class="skeleton__rect"></div>
+                        <div class="skeleton__rect skeleton__rect_long"></div>
+                    </div>
+                </div>
+                <div class="skeleton__main">
+                    <div class="skeleton__rect skeleton__rect_veryLong"></div>
+                    <div class="skeleton__rect skeleton__rect_veryLong"></div>
                 </div>
             </div>
-            <div class="skeleton__main">
-                <div class="skeleton__rect skeleton__rect_veryLong"></div>
-                <div class="skeleton__rect skeleton__rect_veryLong"></div>
-            </div>
-        </div>
-        
-        <div style="height: 20px"></div>
+        </section>
 
-        CSS only:
-        <div class="skeletonCSS"></div>
+        <section>
+            CSS only:
+            <div class="skeletonCSS"></div>
+        </section>
     </body>
 </html>
