@@ -53,8 +53,19 @@
 }
 
 .histogram__headerViewAllButton {
-    /* this element seems to be <button> so I used <button> in markup */
-    all: unset;
+    /*
+        this element seems to be a separate component '.button'
+        And, I used <button> in markup
+    */
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    /* OR all: unset; */
+
     height: fit-content;
 
     font-family: Inter;
