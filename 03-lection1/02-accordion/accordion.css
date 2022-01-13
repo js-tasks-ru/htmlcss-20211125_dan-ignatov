@@ -9,6 +9,10 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+
+    --itemSummaryOpenCloseButtonWidth: 18px;
+    --accordionPaddings: 24px calc(32px + var(--itemSummaryOpenCloseButtonWidth)) 24px 32px;
+    --itemSummaryToContentSpace: 16px;
 }
 
 /* >>> clear default browser' paintings */
@@ -53,10 +57,7 @@
     */
 
     .accordion__item {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        padding-left: 32px;
-        padding-right: 48px; /* 32(figma) + 16(svg width, used as negative margine) = 48 */
+        padding: var(--accordionPaddings);
 
         border: 1px solid var(--grey-3);
         box-sizing: border-box;
@@ -70,7 +71,12 @@
 /* >>> accordion__itemSummary */
 
     .accordion__itemSummary {
-        margin-right: -16px;
+        /*
+            Я хочу сохранить возможность задания контента без декларации отдельного div.
+            Если отказаться от этой возможности, то можно сделать явный <div class="accordion__itemContent" 
+            с 'padding-right: var(--itemSummaryOpenCloseButtonWidth);'
+        */
+        margin-right: calc(0px - var(--itemSummaryOpenCloseButtonWidth));
         cursor: pointer;
         
         display: flex;
@@ -86,13 +92,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 18px;
+        /* Что бы не было зависимости от размера картинки svg width='18' */
+        width: var(--itemSummaryOpenCloseButtonWidth);
     }
 
-    /* handle open/close states: the <details> tag should be marked with 'accordion__item' */
+    /*
+        handle open/close states: the <details> tag should be marked with 'accordion__item'
+        Это не модификаторы в отдельном CSS классе 'accordion__item_closed/accordion__item_opened'
+        потому что состоянием open/cloded управляет браузер.
+    */
     
     .accordion__item[open] > .accordion__itemSummary {
-        padding-bottom: 16px;
+        padding-bottom: var(--itemSummaryToContentSpace);
     }
     
     .accordion__item[open] > .accordion__itemSummary::after {
