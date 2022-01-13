@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./histogram.css">
     </head>
     <body>
-        <div id="chart1" class="histogram">
+        <div id="chart1" class="histogram" style="height: 400px">
             <!-- <header> ? <article>? <details/summary>? -->
             <div class="histogram__header">
                 <div class="histogram__headerCaption">
@@ -26,10 +26,9 @@
         </div>
         <script>
             /* Source values are from '0' to '1' */
-            const values = [];
-            for(let i = 0; i < (30 + Math.random() * 5); i++) {
-                values.push(Math.random());
-            }
+            // const values = new Array(30).fill(0);
+            // values.forEach((_, index, array) => array[index] = Math.floor(Math.random() * 100) / 100);
+            const values = [0.57, 0.51, 0.48, 0.84, 0.13, 0.18, 0.55, 0.63, 0.09, 0.57, 0.51, 0.52, 0.75, 0.1, 0.31, 0.58, 0.07, 0.45, 0.2, 0.13, 0.2, 0.21, 0.92, 0.94, 0.34, 0.7, 0.69, 0.56, 0.97, 0.71];
 
             /* Convert source values to 'chart representation' */
             const chart1El = document.querySelector('#chart1 .histogram__values');

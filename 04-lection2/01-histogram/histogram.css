@@ -9,6 +9,12 @@
     border-radius: 8px;
 
     background: var(--white);
+
+    --spaceBetweenHeaderAndChart: 39px; /* From Figma */
+
+    /* children layout options */
+    display: flex;
+    flex-direction: column;
 }
 
 .histogram__header {
@@ -17,7 +23,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding-bottom: 39px; /* From Figma */
+    padding-bottom: var(--spaceBetweenHeaderAndChart);
 }
 
 .histogram__headerCaption {
@@ -70,12 +76,13 @@
 }
 
 .histogram__values {
-    height: 50px;
+    flex-grow: 1;
 
     /* children layout options */
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    /* OR: align-items: stretch; + margin-top: calc(var(--value) * 100%); */
     justify-content: space-between;
     column-gap: 1px;
 }
