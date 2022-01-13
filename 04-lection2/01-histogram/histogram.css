@@ -67,6 +67,7 @@
     /* OR all: unset; */
 
     height: fit-content;
+    /* height: auto; - with this style, the <button> element will have large height with v-centered text*/
 
     font-family: Inter;
     font-style: normal;
