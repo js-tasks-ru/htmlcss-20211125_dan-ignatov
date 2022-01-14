@@ -7,7 +7,7 @@
         <title>Calendar</title>
     </head>
     <body>
-        <div id="calendar1" class="calendar" style="width: 324px;">
+        <div id="calendar1" class="calendar">
             <div class="calendar__header">January 2022</div>
             <div class="calendar__mainSquare">
                 <div class="calendar__mainContent">
@@ -18,22 +18,34 @@
             const weekDayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
             const calendar1MainContentElement = document.querySelector('#calendar1 .calendar__mainContent');
             weekDayNames.forEach(weekDayName => {
-                const element = document.createElement('div');
-                element.classList.add('calendar__weekDayName');
-
                 const textElement = document.createElement('div');
                 textElement.textContent = weekDayName;
+
+                const element = document.createElement('div');
+                element.classList.add('calendar__weekDayName');
                 element.appendChild(textElement);
                 calendar1MainContentElement.appendChild(element);
             });
 
+            const weekShift = 3;
             const days = new Array(35).fill(0);
             days.forEach((_, index) => {
+                const dayName = index - weekShift;
+                
+                const textElement = document.createElement('div');
+                textElement.textContent = (index > weekShift) ? dayName : '';
+
                 const element = document.createElement('div');
                 element.classList.add('calendar__day');
 
-                const textElement = document.createElement('div');
-                textElement.textContent = (index > 3) ? (index - 3) : '';
+                if(dayName === 18 || dayName === 23) {
+                    element.classList.add('calendar__day_selectionEnd');
+                }
+
+                if(18 < dayName && dayName < 23) {
+                    element.classList.add('calendar__day_selectionMiddle');
+                }                
+
                 element.appendChild(textElement);
                 calendar1MainContentElement.appendChild(element);
             });

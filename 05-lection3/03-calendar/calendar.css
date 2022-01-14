@@ -11,6 +11,7 @@
     --spaceMainToLeft: 26;
     --spaceMainToRight: 26;
 
+    max-width: 30em;
     padding:
         calc(1px * var(--spaceTopToHeader))
         calc(1px * var(--spaceMainToRight))
@@ -65,8 +66,19 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    
+
     color: var(--grey-4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__day_selectionEnd {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.calendar__day_selectionMiddle {
+    background: var(--grey-3);
 }
