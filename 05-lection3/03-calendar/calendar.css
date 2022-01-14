@@ -1,0 +1,72 @@
+.calendar {
+    background: #FFFFFF;
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    --spaceTopToHeader: 28;
+    --spaceHeaderToMain: 16;
+    --spaceMainToBottom: 32;
+    --spaceMainToLeft: 26;
+    --spaceMainToRight: 26;
+
+    padding:
+        calc(1px * var(--spaceTopToHeader))
+        calc(1px * var(--spaceMainToRight))
+        calc(1px * var(--spaceMainToBottom))
+        calc(1px * var(--spaceMainToLeft));
+}
+
+.calendar__header {
+    --headerHeight: 24;
+
+    height: calc(1px * var(--headerHeight));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: calc(1px * var(--spaceHeaderToMain) / 2);
+}
+
+.calendar__mainSquare {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.calendar__mainContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__weekDayName {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: var(--grey-3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__day {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: var(--grey-4);
+}
