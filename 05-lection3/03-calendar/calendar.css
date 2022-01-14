@@ -1,5 +1,5 @@
 .calendar {
-    background: #FFFFFF;
+    background: var(--white);
 
     border: 1px solid var(--grey-3);
     box-sizing: border-box;
