@@ -18,6 +18,8 @@
             const weekDayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
             const calendar1MainContentElement = document.querySelector('#calendar1 .calendar__mainContent');
             weekDayNames.forEach(weekDayName => {
+                // Create explicit 'text only' inner div to call div.getBoundingClientRect
+                // and sync spacings between DOM texts with Figma spacings
                 const textElement = document.createElement('div');
                 textElement.textContent = weekDayName;
 
@@ -32,6 +34,8 @@
             days.forEach((_, index) => {
                 const dayName = index - weekShift;
                 
+                // Create explicit 'text only' inner div to call div.getBoundingClientRect
+                // and sync spacings between DOM texts with Figma spacings
                 const textElement = document.createElement('div');
                 textElement.textContent = (index > weekShift) ? dayName : '';
 
