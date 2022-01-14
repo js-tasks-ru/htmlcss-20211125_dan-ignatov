@@ -12,6 +12,8 @@
     --spaceMainToRight: 26;
 
     max-width: 30em;
+    min-width: 15em;
+
     padding:
         calc(1px * var(--spaceTopToHeader))
         calc(1px * var(--spaceMainToRight))
@@ -28,7 +30,7 @@
     justify-content: center;
     align-items: center;
 
-    padding-bottom: calc(1px * var(--spaceHeaderToMain) / 2);
+    padding-bottom: calc(1px * var(--spaceHeaderToMain));
 }
 
 .calendar__mainSquare {
