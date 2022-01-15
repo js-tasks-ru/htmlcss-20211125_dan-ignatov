@@ -87,11 +87,32 @@
     align-items: flex-end;
     /* OR: align-items: stretch; + margin-top: calc(var(--value) * 100%); */
     justify-content: space-between;
-    column-gap: 1px;
 }
 
 .histogram__value {
     background: var(--blue);
     flex-grow: 1;
     height: calc(var(--value) * 100%);
+}
+
+/* Spacing between bars v1, doesn't look good: 5 spaces are 2px and 24 spaces are 1px */
+
+.histogram__values {
+    /* column-gap: 1px; */
+}
+
+/* Spacing between bars v2, doesn't look good: 7 spaces are 2px and 22 spaces are 1px */
+
+.histogram__value {
+    /* margin-right: 1px; */
+}
+
+/* Spacing between bars v2, looks better: all spaces are 1px, 8 bars are 30px and 21 bars are 31px */
+
+.histogram__value {
+    border-left: 1px solid var(--white);
+}
+
+.histogram__value:first-child {
+    border-left: none;
 }
