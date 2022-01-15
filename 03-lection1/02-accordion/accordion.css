@@ -1,1 +1,115 @@
 /* Стилизация аккордеона */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    --itemSummaryOpenCloseButtonWidth: 18px;
+    --itemSummaryToContentSpace: 16px;
+}
+
+/* >>> clear default browser' paintings */
+
+    /*
+        I will remove the embedded browser' visual element 'marker' from DOM tree
+        because it doesn't allow to modify its representation as in Figma:
+        - https://developer.mozilla.org/en-US/docs/Web/CSS/::marker
+        - https://www.w3.org/TR/css-pseudo-4/#selectordef-marker
+    */
+    .accordion__itemSummary::-webkit-details-marker {
+        display: none
+    }
+
+    /* And, I will override the embedded browser' styles for 'summary' element: */
+    .accordion__itemSummary {
+        list-style: none;
+    }
+
+/* <<< clear default browser' paintings */
+
+/* >>> accordion__item */
+
+    /*
+        [Совмещение тега и класса в селекторе](https://ru.bem.info/methodology/css/#%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%B3%D0%B0-%D0%B8-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-%D0%B2-%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B5)
+
+        Именно в этом упражнении используются тэги ```<details><summary /><details>``` и мой компонент сразу 
+        основан на использовании поведения, которое предоставляет UA для этих тэгов: обработка переходов фокуса,
+        визуализация фокуса, мышиные клики, кнопки клавиатуры, тач устройства, другие специальные устройства,
+        раскрытие/схлопывание, работа в разных состояниях.
+
+        Все это уже есть и я не делаю это поведение в моем CSS коде, а компонент просто не будет работать
+        на других тэгах или на другой структуре тэгов.
+
+        Но из-за разной специфичности селекторов с тэгами и без тэгов
+        ["БЭМ не рекомендует совмещать теги и классы в селекторе"](https://ru.bem.info/methodology/css/#%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%B3%D0%B0-%D0%B8-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0-%D0%B2-%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B5).
+
+        Лучше прописывать CSS классы даже в единственно возможном контексте применения правил в HTML разметке,
+        когда эти классы явно можно полностью исключить из кода и использовать имена тэгов в селекторах.
+        Даже если компонент завязан на конкретные тэги и точно не будет работать на других
+        и логическая структура компонента неразрывно связана со структурой тэгов.
+    */
+
+    .accordion__item {
+        padding: 24px 32px;
+
+        border: 1px solid var(--grey-3);
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        color: var(--grey-4);
+    }
+
+/* <<< accordion__item */
+
+/* >>> accordion__itemSummary */
+
+    .accordion__itemSummary {
+        cursor: pointer;
+        
+        color: var(--black);
+
+        /* Layout childred */
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;        
+        align-items: center;
+    }
+
+    .accordion__itemSummary::after {
+        content: url("data:image/svg+xml;utf8,<svg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L9 9L17 1' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Что бы не было зависимости от размера картинки svg width='18' */
+        width: var(--itemSummaryOpenCloseButtonWidth);
+    }
+
+    /*
+        handle open/close states: the <details> tag should be marked with 'accordion__item'
+        Это не модификаторы в отдельном CSS классе 'accordion__item_closed/accordion__item_opened'
+        потому что состоянием open/cloded управляет браузер.
+    */
+    
+    .accordion__item[open] > .accordion__itemSummary {
+        padding-bottom: var(--itemSummaryToContentSpace);
+    }
+    
+    .accordion__item[open] > .accordion__itemSummary::after {
+        transform: rotateX(180deg);
+    }
+
+/* <<< accordion__itemSummary */
+
+/* >>> accordion__itemContent */
+
+.accordion__itemContent {
+    padding-right: var(--itemSummaryOpenCloseButtonWidth);
+}
+
+/* <<< accordion__itemContent */
