@@ -1,14 +1,14 @@
-.pageTemplate {
+.page-template {
     display: flex;
     flex-direction: column;
 }
 
-.pageTemplate__header {
+.page-template__header {
     min-height: 82px;
     background: var(--white);
 }
 
-.pageTemplate__root {
+.page-template__root {
     min-width: min-content; /* 'padding-right' is not considered to show HScroll without this value */
 
     flex-grow: 1;
@@ -19,7 +19,7 @@
     flex-direction: row;
 }
 
-.pageTemplate__navigation {
+.page-template__navigation {
     align-self: flex-start;
     min-width: 229px;
 
@@ -27,7 +27,7 @@
     flex-direction: column;
 }
 
-.pageTemplate__navigationCaption {
+.page-template__navigation-caption {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -39,7 +39,7 @@
     margin: 0 0 16px 0;
 }
 
-.pageTemplate__navigationItem {
+.page-template__navigation-item {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -49,15 +49,15 @@
     color: var(--black);
 }
 
-.pageTemplate__navigationItem_selected {
+.page-template__navigation-item_selected {
     color: var(--red-1);
 }
 
-.pageTemplate__navigationItem_mainPage {
+.page-template__navigation-item_mainPage {
     margin: 30px 0 0 0;
 }
 
-.pageTemplate__itemDetails {
+.page-template__item-details {
     flex-grow: 1;
     align-self: stretch;
 
@@ -69,7 +69,7 @@
     padding: 32px 48px;
 }
 
-.pageTemplate__itemCaption {
+.page-template__item-caption {
     margin: 0 0 24px 0;
 
     font-family: Inter;
@@ -81,7 +81,7 @@
     color: var(--grey-4);
 }
 
-.pageTemplate__footer {
+.page-template__footer {
     background: var(--grey-5);
     display: flex;
     align-items: center;
