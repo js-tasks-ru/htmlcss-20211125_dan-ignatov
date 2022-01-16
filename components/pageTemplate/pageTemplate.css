@@ -1,7 +1,7 @@
 /*
     Example:
 
-    <div class="pageTemplate" style="height: 100%">
+    <div class="pageTemplate">
         <header class="pageTemplate__header">
             My Header
         </header>
@@ -31,7 +31,7 @@
 
 .pageTemplate__main {
     flex-grow: 1;
-    min-width: min-content; /* Show HScroll on narrow screen */
+    min-width: min-content; /* It shows HScroll on narrow screen */
     
     padding: 36px 0 56px 0;
 }

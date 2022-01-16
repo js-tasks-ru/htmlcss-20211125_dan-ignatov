@@ -1,9 +1,25 @@
+/*
+    Example:
+
+    <div class="pageTemplate">
+        <header class="pageTemplate__header">
+            My Header
+        </header>
+        <div class="pageTemplate__main">
+            My Main Content
+        </div>
+        <footer class="pageTemplate__footer">
+            My Footer
+        </footer>
+    </div>
+*/
+
 .pageTemplateNavigationItemContent {
     height: 100%;
 }
 
 .pageTemplateNavigationItemContent__header {
-    margin: 0 0 24px 0;
+    margin-bottom: 0 0 24px 0;
 
     font-family: Inter;
     font-style: normal;
