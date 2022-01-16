@@ -1,0 +1,119 @@
+.histogram {
+    padding: 16px 24px 24px;
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    background: var(--white);
+
+    --spaceBetweenHeaderAndChart: 39px; /* From Figma */
+
+    /* children layout options */
+    display: flex;
+    flex-direction: column;
+}
+
+.histogram__header {
+    /* children layout options */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-bottom: var(--spaceBetweenHeaderAndChart);
+}
+
+.histogram__headerCaption {
+    /* children layout options */
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.histogram__headerCaptionText {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--black);
+
+    opacity: 0.8;
+}
+
+.histogram__headerCaptionTotal {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: var(--black);
+}
+
+.histogram__headerViewAllButton {
+    /*
+        this element seems to be a separate component '.button'
+        And, I used <button> in markup
+    */
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    /* OR all: unset; */
+
+    align-self: start; /* imho it is better than "height: fit-content;" */
+
+    /* height: auto; - with this style, the <button> element will have large height with v-centered text*/
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--blue);
+}
+
+.histogram__values {
+    flex-grow: 1;
+
+    /* children layout options */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* OR: align-items: stretch; + margin-top: calc(var(--value) * 100%); */
+    justify-content: space-between;
+}
+
+.histogram__value {
+    background: var(--blue);
+    flex-grow: 1;
+    height: calc(var(--value) * 100%);
+}
+
+/* Spacing between bars v1, doesn't look good: 5 spaces are 2px and 24 spaces are 1px */
+
+.histogram__values {
+    /* column-gap: 1px; */
+}
+
+/* Spacing between bars v2, doesn't look good: 7 spaces are 2px and 22 spaces are 1px */
+
+.histogram__value {
+    /* margin-right: 1px; */
+}
+
+/* Spacing between bars v2, looks better: all spaces are 1px, 8 bars are 30px and 21 bars are 31px */
+
+.histogram__value {
+    border-left: 1px solid var(--white);
+}
+
+.histogram__value:first-child {
+    border-left: none;
+}
