@@ -55,3 +55,14 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* avoid scrollview when body:height is 100% because default value is 8px */
+    margin-top: 0;
+    margin-bottom: 0;
+}
