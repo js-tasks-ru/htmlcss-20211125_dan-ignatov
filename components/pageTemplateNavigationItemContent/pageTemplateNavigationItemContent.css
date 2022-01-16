@@ -1,16 +1,15 @@
 /*
     Example:
 
-    <div class="pageTemplate">
-        <header class="pageTemplate__header">
-            My Header
-        </header>
-        <div class="pageTemplate__main">
-            My Main Content
-        </div>
-        <footer class="pageTemplate__footer">
-            My Footer
-        </footer>
+    <div class="pageTemplateNavigationItemContent">
+        <article>
+            <header>
+                <h3 class="pageTemplateNavigationItemContent__header">Histogram</h3>
+            </header>
+            <main class="pageTemplateNavigationItemContent__main">
+                My content
+            </main>
+        </article>
     </div>
 */
 
