@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Страница с гистограммой -->
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="./histogram.css">
+    </head>
+    <body>
+        <div id="chart1" class="histogram" style="height: 400px">
+            <!-- <header> ? <article>? <details/summary>? -->
+            <div class="histogram__header">
+                <div class="histogram__headerCaption">
+                    <div class="histogram__headerCaptionText">
+                        Total orders
+                    </div>
+                    <div class="histogram__headerCaptionTotal">
+                        50254
+                    </div>
+                </div>
+                <button class="histogram__headerViewAllButton">
+                    View all
+                </button >
+            </div>
+            <div class="histogram__values">
+            </div>
+        </div>
+        <script>
+            /* Source values are from '0' to '1' */
+            // const values = new Array(30).fill(0);
+            // values.forEach((_, index, array) => array[index] = Math.floor(Math.random() * 100) / 100);
+            const values = [0.57, 0.51, 0.48, 0.84, 0.13, 0.18, 0.55, 0.63, 0.09, 0.57, 0.51, 0.52, 0.75, 0.1, 0.31, 0.58, 0.07, 0.45, 0.2, 0.13, 0.2, 0.21, 0.92, 0.94, 0.34, 0.7, 0.69, 0.56, 0.97, 0.71];
+
+            /* Convert source values to 'chart representation' */
+            const chart1El = document.querySelector('#chart1 .histogram__values');
+            values.forEach(value => {
+                const chartValueEl = document.createElement('div');
+                chartValueEl.classList.add('histogram__value');
+                // chartValueEl.style.height = Math.floor(value * 100) + '%'; - use css variable instead to keep all the UI code in CSS
+                chartValueEl.style.setProperty('--value', value);
+                chart1El.appendChild(chartValueEl);
+            });
+        </script>
+    </body>
+</html>

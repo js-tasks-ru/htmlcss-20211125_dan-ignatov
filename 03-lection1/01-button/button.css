@@ -1,1 +1,124 @@
-/* Стилизация кнопки */
+/* Button internals are complex:
+    - https://css-tricks.com/overriding-default-button-styles/
+    - https://css-tricks.com/use-button-element/
+*/
+
+/* Стилизация кнопки v1: <div role="button" /> - keyboard/touch handlers? form submit? special devices? anything else? */
+
+/* Стилизация кнопки v2: <button> Btn </button> */
+.button {
+    /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/unset
+        IE doesn't support it - it's ok
+        TODO: there are 'inherited/initial' in description?
+    */
+    all: unset;
+
+    /* Explicit enumeration v1:
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    */
+
+    /* Explicit enumeration v2:
+    background-color: transparent;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; 
+    */
+
+    border-radius: 8px;
+    width: 189px;
+    height: 48px;
+ 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+
+    transition: background 500ms ease-in-out, border 500ms ease-in-out;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    /* TODO: text overflow */
+}
+
+.button[disabled]
+{
+    cursor: unset;
+    opacity: 0.5;
+}
+
+/* >>> defaults by modificators */
+
+    .button_primary {
+        color: var(--button_primary-color);
+        background: var(--button_primary-background);
+    }
+
+    .button_secondary {
+        color: var(--button_secondary-color);
+        background: var(--button_secondary-background);
+    }
+
+    .button_alternate {
+        border: 1px solid var(--button_alternate-border-color);
+        color: var(--button_alternate-color);
+        background: var(--button_alternate-background);
+    }
+    
+/* <<< default by modificators */
+
+/* >>> hover */
+
+    /*
+        The following scenes will be managed as 'hover':
+        - focus (focus-visible/focus-within) - https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+        - active - https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+        And, I will not research 'default' - https://developer.mozilla.org/en-US/docs/Web/CSS/:default
+    */
+
+    .button_primary:hover:not(.button[disabled]),
+    .button_primary:active:not(.button[disabled]),
+    .button_primary:focus:not(.button[disabled])
+    {
+        background: var(--button_primary-background-hover);
+    }
+
+    .button_secondary:hover:not(.button[disabled]),
+    .button_secondary:active:not(.button[disabled]),
+    .button_secondary:focus:not(.button[disabled])
+    {
+        background: var(--button_secondary-background-hover);
+    }
+
+    .button_alternate:hover:not(.button[disabled]),
+    .button_alternate:active:not(.button[disabled]),
+    .button_alternate:focus:not(.button[disabled])
+    {
+        border-color: var(--button_alternate-border-color-hover);
+    }
+
+/* <<< hover */
+
+/* >>> disabled */
+
+    .button_primary[disabled]
+    {
+        color: var(--button_primary-color-disabled);
+    }
+
+    .button_secondary[disabled]
+    {
+        color: var(--button_secondary-color-disabled);
+    }
+
+/* <<< disabled */
