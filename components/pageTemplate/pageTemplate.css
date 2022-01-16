@@ -1,0 +1,43 @@
+/*
+    Example:
+
+    <div class="pageTemplate" style="height: 100%">
+        <header class="pageTemplate__header">
+            My Header
+        </header>
+        <div class="pageTemplate__main">
+            My Main Content
+        </div>
+        <footer class="pageTemplate__footer">
+            My Footer
+        </footer>
+    </div>
+*/
+
+.pageTemplate {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.pageTemplate__header {
+    min-height: 82px;
+    background: var(--white);
+}
+
+.pageTemplate__main {
+    min-width: min-content; /* 'padding-right' on child is not considered to show HScroll without this value */
+
+    flex-grow: 1;
+    background: var(--grey-5);
+    padding: 36px 165px 56px 165px;
+}
+
+.pageTemplate__footer {
+    background: var(--grey-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

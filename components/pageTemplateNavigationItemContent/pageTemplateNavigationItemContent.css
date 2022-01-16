@@ -1,0 +1,18 @@
+.pageTemplateNavigationItemContent {
+    height: 100%;
+}
+
+.pageTemplateNavigationItemContent__header {
+    margin: 0 0 24px 0;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 38px;
+
+    color: var(--grey-4);
+}
+
+.pageTemplateNavigationItemContent__main {
+}

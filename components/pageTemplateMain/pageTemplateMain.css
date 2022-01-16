@@ -1,0 +1,36 @@
+/*
+    Example:
+
+    <div class="pageTemplateMain">
+        <nav class="pageTemplateMain__navigation">
+            My Navigation Items
+        </nav>
+        <main class="pageTemplateMain__navigationItemContent">
+            My Navigation Item Content
+        </main>
+    </div>
+*/
+
+.pageTemplateMain {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pageTemplateMain__navigation {
+    align-self: flex-start;
+    min-width: 229px;
+    max-width: 229px;
+}
+
+.pageTemplateMain__navigationItemContent {
+    flex-grow: 1;
+    align-self: stretch;
+
+    margin: 0 0 0 56px;
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+
+    padding: 32px 48px;
+}

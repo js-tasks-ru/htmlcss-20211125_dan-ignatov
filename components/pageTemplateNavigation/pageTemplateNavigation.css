@@ -1,0 +1,56 @@
+/*
+    Example:
+
+    <div class="pageTemplateNavigation">
+        <h4 class="pageTemplateNavigation__caption">
+            My Caption
+        </h4>
+        <div class="pageTemplateNavigation__item">
+            Item 1
+        </div>
+        <div class="pageTemplateNavigation__item">
+            Item 2
+        </div>
+        <div class="pageTemplateNavigation__item pageTemplateNavigation__item_selected">
+            Selected Item
+        </div>
+        <div class="pageTemplateNavigation__item pageTemplateNavigation__item_mainPage">
+            Main Page Item
+        </div>
+    </div>
+*/
+
+.pageTemplateNavigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.pageTemplateNavigation__caption {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: var(--black-1);
+
+    margin: 0 0 16px 0;
+}
+
+.pageTemplateNavigation__item {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: var(--black);
+}
+
+.pageTemplateNavigation__item_selected {
+    color: var(--red-1);
+}
+
+.pageTemplateNavigation__item_mainPage {
+    margin: 30px 0 0 0;
+}
