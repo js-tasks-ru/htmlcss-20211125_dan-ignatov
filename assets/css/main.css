@@ -17,6 +17,36 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    /* button */
+
+    /* button_primary */
+
+    --button_primary-background: #4263EB; /* Marked as 'Blue' in Figma, but '--blue' is '#374FC7' in main.css */
+    --button_primary-background-hover: #2342C0;
+    --button_primary-color: #FFFFFF; /* There is '--white' but I would prefer to sync my color declarations with Figma: there is no 'White' in Figma */
+    /*
+        TODO: how to convert HEX to RGB/RGBA in CSS at runtime?
+        https://sass-lang.com/documentation/modules#rgb ? - preprocessor, no runtime
+        color: rgba(var(--button_primary-color), 0.5); ? - doesn't work
+        color: var(--button_primary-color)88; ? - doesn't work
+        color: rgba(255, 255, 255, 0.5); ? - ok, but it requires RGB in decimals
+    */
+    --button_primary-color-disabled: #FFFFFF88;
+
+    /* button_secondary */
+
+    --button_secondary-background: var(--purple); /* Purple in Figma*/
+    --button_secondary-background-hover: #5028C6;
+    --button_secondary-color: #FFFFFF;
+    --button_secondary-color-disabled: #FFFFFF88;
+
+    /* button_alternate */
+
+    --button_alternate-background: #FFFFFF;
+    --button_alternate-border-color: var(--grey-3); /* Gray 3 in Figma*/
+    --button_alternate-border-color-hover: var(--black); /* Black in Figma*/        
+    --button_alternate-color: var(--grey-4); /* Gray 4 in Figma*/
 }
 
 * {
