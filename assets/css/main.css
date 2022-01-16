@@ -65,7 +65,12 @@ body {
     margin: 0; /* default is 8px */
 }
 
+/*
+TODO: Why it doesn't set 1100px width on wide screen <div class="pageTemplate__main align-page-roots"> ?
+
 .align-page-roots {
     max-width: 1110px;
     margin: 0 auto;
 }
+
+*/
