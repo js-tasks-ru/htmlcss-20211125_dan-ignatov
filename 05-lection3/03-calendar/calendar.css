@@ -5,20 +5,10 @@
     box-sizing: border-box;
     border-radius: 8px;
 
-    --spaceTopToHeader: 28;
-    --spaceHeaderToMain: 16;
-    --spaceMainToBottom: 32;
-    --spaceMainToLeft: 26;
-    --spaceMainToRight: 26;
-
     max-width: 30em;
     min-width: 15em;
 
-    padding:
-        calc(1px * var(--spaceTopToHeader))
-        calc(1px * var(--spaceMainToRight))
-        calc(1px * var(--spaceMainToBottom))
-        calc(1px * var(--spaceMainToLeft));
+    padding: 28px 26px 32px 26px;
 }
 
 .calendar__header {
@@ -30,7 +20,7 @@
     justify-content: center;
     align-items: center;
 
-    padding-bottom: calc(1px * var(--spaceHeaderToMain));
+    margin-bottom: 16px;
 }
 
 .calendar__mainSquare {
