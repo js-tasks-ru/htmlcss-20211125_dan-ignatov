@@ -1,0 +1,165 @@
+.skeleton {
+    height: 192px;
+
+    background: var(--white);
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 24px 40px 32px 24px;
+}
+
+.skeleton__header {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.skeleton__headerCircle {
+    width: 64px;
+    height: 64px;     
+
+    background: var(--grey-2);
+    border-radius: 32px;
+}
+
+.skeleton__headerRects {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 8px 0 8px 8px;
+}
+
+.skeleton__main {
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 24px 0 0 0;
+}
+
+.skeleton__rect {
+    width: 38.8%; /* 172 / (579 - 24 - 40 - 64 - 8) */
+    height: 20px;
+
+    background: var(--grey-2);
+}
+
+.skeleton__rect_long {
+    width: 58%; /* 257 / (579 - 24 - 40 - 64 - 8) */
+}
+
+.skeleton__rect_veryLong {
+    width: 100%;
+}
+
+/* ======================================================================= */
+/*                                                                         */
+/* https://dev.to/michaelburrows/css-skeleton-loading-screen-animation-gj3 */
+/*                                                                         */
+/* ======================================================================= */
+    
+.skeletonCSS {
+    width: 579px;
+    height: 192px; 
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    cursor: progress; 
+
+    background: 
+        radial-gradient(64px circle at 32px 32px, var(--grey-2) 50%, transparent 51%),
+        linear-gradient(var(--grey-2), var(--grey-2)),
+        linear-gradient(var(--grey-2), var(--grey-2)),
+        linear-gradient(var(--grey-2), var(--grey-2)),
+        linear-gradient(var(--grey-2), var(--grey-2));
+    background-size:
+        64px 64px,
+        172px 20px,
+        257px 20px,
+        515px 20px,
+        515px 20px;
+    background-position:
+        24px 24px,
+        104px 32px,
+        104px 60px,
+        24px 112px,
+        24px 140px;
+    background-repeat: no-repeat;
+}
+
+/* ===================================== */
+
+.skeleton2 {
+    /* width: 579px;
+    height: 192px; */
+
+    background: var(--white);
+
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    /* padding: 4.14% 6.9% 5.5% 4.14%; - '%' of 'width' only */
+
+    display: flex;
+    flex-direction: column;
+
+    --basisHeight: 192;
+}
+
+.skeleton2__spaceTop {
+    /* --spaceTop__basisHeight: 24;
+    flex-grow: calc(1 + var(--spaceTop__basisHeight) / var(--basisHeight));
+    flex-basis: var(--spaceTop__basisHeight); */
+    flex-grow: 125;
+    flex-basis: 24px;
+}
+
+.skeleton2__spaceMiddle {
+    /* --spaceMiddle__basisHeight: 24;
+    flex-grow: calc(1 + var(--spaceMiddle__basisHeight) / var(--basisHeight));
+    flex-basis: var(--spaceMiddle__basisHeight); */
+    flex-grow: 125;
+    flex-basis: 24px;
+}
+
+.skeleton2__spaceBottom {
+    /* --spaceBottom__basisHeight: 32;
+    flex-grow: calc(1 + var(--spaceBottom__basisHeight) / var(--basisHeight));
+    flex-basis: var(--spaceBottom__basisHeight); */
+    flex-grow: 167;
+    flex-basis: 32px;
+}
+
+.skeleton2__header {
+    flex-grow: 333;
+    flex-basis: 64px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.skeleton2__headerCircle {
+    /* flex-grow: 1; */
+    flex-basis: 64px;
+    /* width: 64px; */
+    /* height: 100%; */
+
+    background: var(--grey-2);
+    border-radius: 50%;
+}
+
+.skeleton2__content {
+    flex-grow: 240;
+    flex-basis: 48px;
+}
