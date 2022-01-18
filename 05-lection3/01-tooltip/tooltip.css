@@ -58,8 +58,8 @@
     line-height: 24px;
 
     /* Gray 2 */
-    color: #DDE2E5;
-    background: #4263EB;
+    color: var(--grey-2);
+    background: var(--blue-1);
 
     /* Card Shadow */
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
@@ -102,5 +102,5 @@
     left: 50%;
     transform: translateX(-50%);
     border: var(--beakHeight) solid transparent;
-    border-top: var(--beakHeight) solid #4263EB;
+    border-top: var(--beakHeight) solid var(--blue-1);
 }
