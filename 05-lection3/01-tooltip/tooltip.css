@@ -1,8 +1,26 @@
+/*
+
+    Example:
+
+        <div class="tooltip">
+            <div class="tooltip__bubble">
+                <p class="tooltip__bubble-text"> MY TEXT</p>
+            </div>
+            <svg class="tooltip__icon" width="24" height="24"...
+            </svg>
+        </div>
+
+    Specificities:
+        - large tooltip (for example 'Lorem ipsum...') is not handled, browser will NOT scroll to show it
+        - tooltip will be immediatelly hidden when scrolling (because icon will be moved under the mouse pointer when scrolling)
+        - tooltip will not be shown on touch devices
+        - tooltip is not processed by screen readers when "display: none;" is used
+        - tooltip will not be printed
+*/
+
 .tooltip {
+    /* Allow to use 'position: absolute' in children and set position from the [left,top] of '.tooltip' */
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .tooltip__icon {
@@ -14,13 +32,20 @@
     --beakHeight: 6px;
     --spaceBeakToIcon: 3px;
 
-    /* white-space: nowrap; */
-    min-width: 100px;
+    /* By default element is hidden, will be shown in ".tooltip:hover > .tooltip__bubble" */
     display: none;
+
+    /* Locate element above the icon and center it horizontally (can be implemented via 'flex-direction: column' on parent) */
     position: absolute;
     bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 
     padding: 13px 21px 8px;
+
+    /* Handle wrapping: */
+    white-space: nowrap;
+    /* min-width: 100px; - another way to avoid 'single word' wrapping */
 
     /* Space between bubble and its icon */
     margin-bottom: calc(var(--beakHeight) + var(--spaceBeakToIcon));
@@ -41,20 +66,35 @@
     border-radius: 10px;
 }
 
-/* Use '.tooltip': I want to select&copy text from tooltip by mouse */
-.tooltip:hover > .tooltip__bubble {
-    /* 10 Ways to Hide Elements in CSS - https://www.sitepoint.com/hide-elements-in-css/ */
-
-    display: inline-block; /* can be slow, but my markup is very simple */
-    
-    /* requires many styles */
-    /* width: unset;
-    height: unset;
-    overflow: unset;
-    padding: 13px 21px 8px;*/
+.tooltip__bubble-text {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/* It will be the last child of <tooltip-bubble>: "::after" creates a pseudo-element that is the last child of the selected element */
+/* Use '.tooltip': I want to select&copy text from tooltip by mouse */
+.tooltip:hover > .tooltip__bubble {
+    /*
+        10 Ways to Hide Elements in CSS - https://www.sitepoint.com/hide-elements-in-css/
+        https://htmlacademy.ru/blog/boost/frontend/short-12
+    */
+
+    /* 1. Remove from DOM, create new DOM element to show */
+    display: inline; /* can be slow, but my markup is very simple */
+
+    /* 2. Keep in DOM, squeeze painting area */
+    /* clip-path */
+    
+    /* 3. Keep in DOM, squeeze painting area */
+    /* width: 0->unset;
+    height: 0->unset;
+    overflow: 0->unset;
+    padding: 0->13px 21px 8px;*/
+
+    /* 4. Keep in DOM, move out of the visible area */
+    /* transform: translate(-9999)->unset;*/
+}
+
+/* Add new last child into <tooltip-bubble> element */
 .tooltip__bubble::after {
     content: "";
     position: absolute;
