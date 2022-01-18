@@ -16,7 +16,7 @@ Enhancements:
     height: 100vh;
     width: 100vw;
 
-    background: var(--grey-4-half-opacity);
+    background: var(--grey-5-half-opacity);
 }
 
 .modal__body {
