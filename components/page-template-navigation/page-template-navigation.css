@@ -1,32 +1,32 @@
 /*
     Example:
 
-    <div class="pageTemplateNavigation">
-        <h4 class="pageTemplateNavigation__caption">
+    <div class="page-template-navigation">
+        <h4 class="page-template-navigation__caption">
             My Caption
         </h4>
-        <div class="pageTemplateNavigation__item">
+        <div class="page-template-navigation__item">
             Item 1
         </div>
-        <div class="pageTemplateNavigation__item">
+        <div class="page-template-navigation__item">
             Item 2
         </div>
-        <div class="pageTemplateNavigation__item pageTemplateNavigation__item_selected">
+        <div class="page-template-navigation__item page-template-navigation__item_selected">
             Selected Item
         </div>
-        <div class="pageTemplateNavigation__item pageTemplateNavigation__item_mainPage">
+        <div class="page-template-navigation__item page-template-navigation__item_mainPage">
             Main Page Item
         </div>
     </div>
 */
 
-.pageTemplateNavigation {
+.page-template-navigation {
     /* align children */
     display: flex;
     flex-direction: column;
 }
 
-.pageTemplateNavigation__caption {
+.page-template-navigation__caption {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -39,7 +39,7 @@
     margin-bottom: 16px;
 }
 
-.pageTemplateNavigation__item {
+.page-template-navigation__item {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -49,11 +49,11 @@
     color: var(--black);
 }
 
-.pageTemplateNavigation__item_selected {
+.page-template-navigation__item_selected {
     color: var(--red-1);
 }
 
-.pageTemplateNavigation__item_mainPage {
+.page-template-navigation__item_mainPage {
     /* additional space between items and the MainPage link */
     margin-top: 30px;
 }

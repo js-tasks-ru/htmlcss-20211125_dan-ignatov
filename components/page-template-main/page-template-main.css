@@ -1,29 +1,29 @@
 /*
     Example:
 
-    <div class="pageTemplateMain">
-        <nav class="pageTemplateMain__navigation">
+    <div class="page-template-main">
+        <nav class="page-template-main__navigation">
             My Navigation Items
         </nav>
-        <main class="pageTemplateMain__navigationItemContent">
+        <main class="page-template-main__navigationItemContent">
             My Navigation Item Content
         </main>
     </div>
 */
 
-.pageTemplateMain {
+.page-template-main {
     flex-grow: 1;
     
     display: flex;
     flex-direction: row;
 }
 
-.pageTemplateMain__navigation {
+.page-template-main__navigation {
     align-self: flex-start;
     width: 229px;
 }
 
-.pageTemplateMain__navigationItemContent {
+.page-template-main__navigationItemContent {
     flex-grow: 1;
     align-self: stretch;
     width: 825px;

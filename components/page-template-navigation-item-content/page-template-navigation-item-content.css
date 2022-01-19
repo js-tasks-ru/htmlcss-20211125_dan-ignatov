@@ -1,22 +1,22 @@
 /*
     Example:
 
-    <div class="pageTemplateNavigationItemContent">
+    <div class="page-template-navigation-item-content">
         <article>
             <header>
-                <h3 class="pageTemplateNavigationItemContent__header">Histogram</h3>
+                <h3 class="page-template-navigation-item-content__header">Histogram</h3>
             </header>
-            <main class="pageTemplateNavigationItemContent__main">
+            <main class="page-template-navigation-item-content__main">
                 My content
             </main>
         </article>
     </div>
 */
 
-.pageTemplateNavigationItemContent {
+.page-template-navigation-item-content {
 }
 
-.pageTemplateNavigationItemContent__header {
+.page-template-navigation-item-content__header {
     margin-bottom: 24px;
 
     font-family: Inter;
@@ -28,5 +28,5 @@
     color: var(--grey-4);
 }
 
-.pageTemplateNavigationItemContent__main {
+.page-template-navigation-item-content__main {
 }

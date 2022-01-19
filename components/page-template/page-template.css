@@ -1,20 +1,20 @@
 /*
     Example:
 
-    <div class="pageTemplate">
-        <header class="pageTemplate__header">
+    <div class="page-template">
+        <header class="page-template__header">
             My Header
         </header>
-        <div class="pageTemplate__main">
+        <div class="page-template__main">
             My Main Content
         </div>
-        <footer class="pageTemplate__footer">
+        <footer class="page-template__footer">
             My Footer
         </footer>
     </div>
 */
 
-.pageTemplate {
+.page-template {
     background: var(--grey-5);
     min-height: 100vh;
 
@@ -23,12 +23,12 @@
     align-items: stretch;
 }
 
-.pageTemplate__header {
+.page-template__header {
     min-height: 82px;
     background: var(--white);
 }
 
-.pageTemplate__main {
+.page-template__main {
     flex-grow: 1;
     min-width: min-content; /* It shows HScroll on narrow screen */
     
@@ -40,7 +40,7 @@
     align-items: stretch;
 }
 
-.pageTemplate__footer {
+.page-template__footer {
     background: var(--grey-5);
 
     display: flex;
