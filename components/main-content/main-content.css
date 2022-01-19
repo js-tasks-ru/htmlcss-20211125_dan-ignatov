@@ -1,0 +1,14 @@
+.main-content {
+    /*
+        These spacings can be implemented via 'padding' in the 'card-view' component
+        but I would prefer to declare it at the highest DOM elements level
+    */
+    padding-top: 38px;   /* 68px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+    padding-bottom: 42px;  /* 92px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+    
+    background: var(--grey-1);
+    border-top: 1px solid var(--grey-2);
+    border-bottom: 1px solid var(--grey-2);
+
+    flex-grow: 1;
+}

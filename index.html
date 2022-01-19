@@ -3,8 +3,42 @@
 <html lang="ru">
     <head>
         <link rel="stylesheet" href="./assets/css/main.css">
-    </head>
-    <body>
 
+        <link rel="stylesheet" href="./components/body-content/body-content.css">
+        <link rel="stylesheet" href="./components/header/header.css">
+        <link rel="stylesheet" href="./components/main-content/main-content.css">
+        <link rel="stylesheet" href="./components/footer/footer.css">
+        <link rel="stylesheet" href="./components/card-view/card-view.css">
+        <link rel="stylesheet" href="./components/align-page-roots/align-page-roots.css">
+    </head>
+    <body class="body-content">
+        <header class="header">
+            <!-- align roots v2: <header class="header align-page-roots"> -->
+            <div class="align-page-roots">
+                <div class="header__title">
+                    Reusable component library
+                </div>
+                <nav class="header__navigation">
+                    [ All components | Elements | Containers | Templates ]
+                </nav>
+            </div>
+        </header>
+        <main class="main-content">
+            <!-- align roots v2: <main class="align-page-roots"> -->
+            <div class="align-page-roots">
+                <div class="card-view">
+                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 1</div>
+                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 2</div>
+                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 3</div>
+                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 4</div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <!-- align roots v2: <footer class="footer align-page-roots"> -->
+            <div class="align-page-roots">
+                <h2 class="footer__about">About</h2>
+            <p class="footer__about-content">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
+        </footer>
     </body>
 </html>
