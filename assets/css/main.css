@@ -65,7 +65,7 @@ body {
     margin: 0; /* default is 8px */
 }
 
-.alignPageRoots {
+.align-page-roots {
     max-width: 1110px;
     margin: 0 auto;
 }
