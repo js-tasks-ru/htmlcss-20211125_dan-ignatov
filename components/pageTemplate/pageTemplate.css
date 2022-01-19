@@ -15,9 +15,8 @@
 */
 
 .pageTemplate {
-    height: 100%;
-
     background: var(--grey-5);
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -34,6 +33,11 @@
     min-width: min-content; /* It shows HScroll on narrow screen */
     
     padding: 36px 0 56px 0;
+
+    /* align children */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .pageTemplate__footer {

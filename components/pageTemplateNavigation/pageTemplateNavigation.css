@@ -21,6 +21,7 @@
 */
 
 .pageTemplateNavigation {
+    /* align children */
     display: flex;
     flex-direction: column;
 }
@@ -34,6 +35,7 @@
 
     color: var(--black-1);
 
+    /* additional space between the caption and items */
     margin-bottom: 16px;
 }
 
@@ -52,5 +54,6 @@
 }
 
 .pageTemplateNavigation__item_mainPage {
+    /* additional space between items and the MainPage link */
     margin-top: 30px;
 }

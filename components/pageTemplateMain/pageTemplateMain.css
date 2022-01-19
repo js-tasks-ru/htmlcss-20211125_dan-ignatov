@@ -12,20 +12,21 @@
 */
 
 .pageTemplateMain {
-    height: 100%;
+    flex-grow: 1;
+    
     display: flex;
     flex-direction: row;
 }
 
 .pageTemplateMain__navigation {
     align-self: flex-start;
-    min-width: 229px;
-    max-width: 229px;
+    width: 229px;
 }
 
 .pageTemplateMain__navigationItemContent {
     flex-grow: 1;
     align-self: stretch;
+    width: 825px;
 
     margin-left: 56px;
     background: var(--white);
