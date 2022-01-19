@@ -19,7 +19,7 @@ Enhancements:
     background: var(--grey-5-half-opacity);
 }
 
-.modal__body {
+.modal__window {
     /* Position in the center of parent */
     position: absolute;
     box-sizing: border-box;
@@ -35,8 +35,8 @@ Enhancements:
 .modal__close {
     /* Move at the top-right corner */
     position: absolute;
-    left: calc(100% - 15.33px);
-    top: 15.33px;
+    left: calc(100% - 15px);
+    top: 15px;
     transform: translate(-100%);
 
     cursor: pointer;
@@ -58,6 +58,8 @@ Enhancements:
     /* Space between header and main content */
     margin: 14px;
 }
+
+.modal__main {}
 
 .modal__main {
     font-family: Inter;
