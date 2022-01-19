@@ -17,7 +17,7 @@
 */
 
 .page-template {
-    background: var(--grey-5);
+    background: var(--grey-6);
     min-height: 100vh;
 
     display: flex;
@@ -42,7 +42,7 @@
 }
 
 .page-template__footer {
-    background: var(--grey-5);
+    background: var(--grey-6);
 
     display: flex;
     align-items: center;
