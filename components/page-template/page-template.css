@@ -30,7 +30,6 @@
 
 .page-template__main {
     flex-grow: 1;
-    min-width: min-content; /* It shows HScroll on narrow screen */
     
     padding: 36px 0 56px 0;
 
