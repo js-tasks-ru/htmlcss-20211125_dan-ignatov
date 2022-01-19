@@ -1,0 +1,58 @@
+.calendar {
+    --month: 'January';
+    --year: '2022';
+
+    background: #FFFFFF;
+
+    border: 1px solid #ACB5BD;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    --spaceTopToHeader: 28;
+    --spaceHeaderToMain: 16;
+    --spaceMainToBottom: 32;
+    --spaceMainToLeft: 26;
+    --spaceMainToRight: 26;
+
+    --headerHeight: 24;
+    --mainHeight: 180;
+    --mainWidth: 234;
+
+    --weekDayCaptionsHeight: 20;
+}
+
+.calendar__header {
+    --height: calc(var(--spaceTopToHeader) + var(--headerHeight) + var(--spaceHeaderToMain) / 2);
+
+    flex-grow: var(--height);
+    flex-basis: calc(1px * var(--height));
+
+    padding-top: calc(1px * var(--spaceTopToHeader));
+    padding-bottom: calc(1px * var(--spaceHeaderToMain) / 2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__header::after {
+    content: var(--month) ' ' var(--year);
+}
+
+.calendar__main {
+    --height: calc(var(--spaceHeaderToMain) / 2 + var(--mainHeight) + var(--spaceMainToBottom));
+    flex-grow: var(--height);
+    flex-basis: calc(1px * var(--height));
+
+    padding-top: calc(1px * var(--spaceHeaderToMain) / 2);
+    padding-right: calc(1px * var(--spaceMainToRight));
+    padding-bottom: calc(1px * var(--spaceMainToBottom));
+    padding-left: calc(1px * var(--spaceMainToLeft));
+
+    /* display: grid;
+    grid-template-columns: 7;
+    grid-template-rows: 6; */
+}

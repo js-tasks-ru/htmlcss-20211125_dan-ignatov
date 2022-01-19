@@ -1,0 +1,39 @@
+.footer {
+    /* ask designer: should footer be aligned by the bottom of the page? */
+    padding-top: 72px;
+    padding-top: 20px; /* 136px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+    padding-bottom: 0px; /* 136px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+}
+
+.footer__about {
+    /* Ask designer - It seems to be aligned to center, but there are 682px/674px in Figma. */
+    text-align: center;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 48px;
+
+    color: var(--black);
+
+    /* h2 - Ask designer - From Figma so I used it in markup and override its margins. */
+    margin: 0;
+}
+
+.footer__about-content {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    /* Ask designer - Text looks like it is centered but it is not specified in Figma */
+    text-align: center;
+
+    color: var(--black);
+
+    width: 640px;
+    margin: 32px auto 0 auto;
+}
