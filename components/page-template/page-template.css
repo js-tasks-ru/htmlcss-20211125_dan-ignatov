@@ -3,12 +3,14 @@
 
     <div class="page-template">
         <header class="page-template__header">
-            My Header
+            <div class="page-template__header-content align-page-roots">
+                My Header
+            </div>
         </header>
-        <div class="page-template__main">
+        <div class="page-template__main align-page-roots">
             My Main Content
         </div>
-        <footer class="page-template__footer">
+        <footer class="page-template__footer align-page-roots">
             My Footer
         </footer>
     </div>
