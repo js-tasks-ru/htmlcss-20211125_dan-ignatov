@@ -5,7 +5,7 @@
         <nav class="page-template-main__navigation">
             My Navigation Items
         </nav>
-        <main class="page-template-main__navigationItemContent">
+        <main class="page-template-main__navigation-item-content">
             My Navigation Item Content
         </main>
     </div>
@@ -24,7 +24,7 @@
     width: 229px;
 }
 
-.page-template-main__navigationItemContent {
+.page-template-main__navigation-item-content {
     flex-grow: 1;
     align-self: stretch;
     width: 825px;
