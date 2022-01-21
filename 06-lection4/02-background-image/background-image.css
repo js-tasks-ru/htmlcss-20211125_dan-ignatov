@@ -1,0 +1,30 @@
+.background-image {
+    /*
+    https://www.youtube.com/watch?v=Dx-WaZkp58Q - Reduce image size: use media queries for background images
+    https://web.dev/optimize-css-background-images-with-media-queries/ - Optimize CSS background images with media queries
+    */
+
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./public/forest_400.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+    .background-image {
+        background-image: url("./public/forest_768.jpg");
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .background-image {
+        background-image: url("./public/forest_1024.jpg");
+    }
+}
+
+@media only screen and (min-width: 2560px){
+    .background-image {
+        background-image: url("./public/forest_2560.jpg");
+    }
+}
