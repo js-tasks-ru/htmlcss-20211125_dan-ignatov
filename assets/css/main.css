@@ -69,6 +69,8 @@ body {
 
 body {
     margin: 0; /* default is 8px */
+    display: flex;
+    flex-direction: column;
 }
 
 .align-page-roots {
