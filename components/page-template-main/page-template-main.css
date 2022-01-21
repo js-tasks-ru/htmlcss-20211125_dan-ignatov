@@ -1,0 +1,38 @@
+/*
+    Example:
+
+    <div class="page-template-main">
+        <nav class="page-template-main__navigation">
+            My Navigation Items
+        </nav>
+        <main class="page-template-main__navigation-item-content">
+            My Navigation Item Content
+        </main>
+    </div>
+*/
+
+.page-template-main {
+    flex-grow: 1;
+    
+    /* align children */
+    display: flex;
+    flex-direction: row;
+}
+
+.page-template-main__navigation {
+    align-self: flex-start;
+    width: 229px;
+}
+
+.page-template-main__navigation-item-content {
+    flex-grow: 1;
+    align-self: stretch;
+    width: 825px;
+
+    margin-left: 56px;
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+
+    padding: 32px 48px;
+}

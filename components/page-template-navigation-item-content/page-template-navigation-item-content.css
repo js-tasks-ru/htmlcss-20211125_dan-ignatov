@@ -1,0 +1,32 @@
+/*
+    Example:
+
+    <div class="page-template-navigation-item-content">
+        <article>
+            <header>
+                <h3 class="page-template-navigation-item-content__header">Histogram</h3>
+            </header>
+            <main class="page-template-navigation-item-content__main">
+                My content
+            </main>
+        </article>
+    </div>
+*/
+
+.page-template-navigation-item-content {
+}
+
+.page-template-navigation-item-content__header {
+    margin-bottom: 24px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 38px;
+
+    color: var(--grey-4);
+}
+
+.page-template-navigation-item-content__main {
+}

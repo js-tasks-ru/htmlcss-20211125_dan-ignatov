@@ -1,0 +1,59 @@
+/*
+    Example:
+
+    <div class="page-template-navigation">
+        <h4 class="page-template-navigation__caption">
+            My Caption
+        </h4>
+        <div class="page-template-navigation__item">
+            Item 1
+        </div>
+        <div class="page-template-navigation__item">
+            Item 2
+        </div>
+        <div class="page-template-navigation__item page-template-navigation__item_selected">
+            Selected Item
+        </div>
+        <div class="page-template-navigation__item page-template-navigation__item_mainPage">
+            Main Page Item
+        </div>
+    </div>
+*/
+
+.page-template-navigation {
+    /* align children */
+    display: flex;
+    flex-direction: column;
+}
+
+.page-template-navigation__caption {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: var(--black-1);
+
+    /* additional space between the caption and items */
+    margin-bottom: 16px;
+}
+
+.page-template-navigation__item {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: var(--black);
+}
+
+.page-template-navigation__item_selected {
+    color: var(--red-1);
+}
+
+.page-template-navigation__item_mainPage {
+    /* additional space between items and the MainPage link */
+    margin-top: 30px;
+}
