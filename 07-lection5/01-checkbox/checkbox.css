@@ -10,7 +10,9 @@
 
 .checkbox__control {
     width: 28px;
+    min-width: 28px;
     height: 28px;
+    min-height: 28px;
 
     background: var(--white);
 
@@ -54,7 +56,7 @@
     line-height: 24px;
     color: #495057;
 
-    display: inline-flex;
+    white-space: nowrap;
 }
 
 .checkbox__input:checked ~ .checkbox__icon-label-container .checkbox__control {
