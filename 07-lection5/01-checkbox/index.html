@@ -5,7 +5,63 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./checkbox.css">
     </head>
-    <body>
+    <style>
+        .demo-container {
+            margin: 10px;
 
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+    <body class="demo-container">
+
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input"/>
+            <span class="checkbox__icon-label-container">
+                <span class="checkbox__control">
+                    <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="checkbox__label">My CheckBox Unchecked</span>
+            </span>
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" checked/>
+            <span class="checkbox__icon-label-container">
+                <span class="checkbox__control">
+                    <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="checkbox__label">My CheckBox Checked</span>
+            </span>
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" disabled/>
+            <span class="checkbox__icon-label-container">
+                <span class="checkbox__control">
+                    <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="checkbox__label">My CheckBox Disabled Unchecked</span>
+            </span>
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" disabled checked/>
+            <span class="checkbox__icon-label-container">
+                <span class="checkbox__control">
+                    <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="checkbox__label">My CheckBox Disabled Checked</span>
+            </span>
+        </label>
     </body>
 </html>
