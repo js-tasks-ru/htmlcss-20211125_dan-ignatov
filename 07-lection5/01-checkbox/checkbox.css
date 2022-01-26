@@ -1,4 +1,6 @@
 .checkbox {
+    width: min-content; /* don't change state on mouse click on empty space right after text, <label> div can be wide */
+
     display: inline-flex;
     flex-direction: column;
 }
@@ -59,6 +61,15 @@
     white-space: nowrap;
 }
 
+/*
+    Selected/Disabled/Focused states
+
+    There are more cases: 
+    - mouse over + primary mouse button hold states (seems to be easy)
+    - support RTL (flex should manage it)
+    - support ':' symbol (new 'div' and flex should manage it)
+*/
+
 .checkbox__input:checked ~ .checkbox__icon-label-container .checkbox__control {
     background: var(--blue-1);
     border-color: var(--blue-1);
@@ -75,6 +86,9 @@
 .checkbox__input[disabled] ~ .checkbox__icon-label-container .checkbox__control {
     background: var(--grey-2);
     border-color: var(--grey-2);
+}
+
+.checkbox__input[disabled] ~ .checkbox__icon-label-container .checkbox__label {
     color: var(--grey-2);
 }
 
