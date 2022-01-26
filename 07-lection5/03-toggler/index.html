@@ -5,7 +5,58 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./toggler.css">
     </head>
-    <body>
+    <style>
+        .demo-container {
+            margin: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+    <body class="demo-container">
+
+        <h5>My toggle:</h5>
+        <label class="toggle">
+            <input type="checkbox" class="toggle__input" name="my-toggle" />
+            <span class="toggle__icon-label-container">
+                <span class="toggle__control">
+                    <div class="toggle__icon"></div>
+                </span>
+                <span class="toggle__label">My toggle Off</span>
+            </span>
+        </label>
+
+        <label class="toggle">
+            <input type="checkbox" class="toggle__input" name="my-toggle" checked />
+            <span class="toggle__icon-label-container">
+                <span class="toggle__control">
+                    <div class="toggle__icon"></div>
+                </span>
+                <span class="toggle__label">My toggle On</span>
+            </span>
+        </label>
+
+        <h5>My toggle disabled:</h5>
+        <label class="toggle">
+            <input type="checkbox" class="toggle__input" name="my-toggle-disabled" disabled />
+            <span class="toggle__icon-label-container">
+                <span class="toggle__control">
+                    <div class="toggle__icon"></div>
+                </span>
+                <span class="toggle__label">My toggle Off</span>
+            </span>
+        </label>
+
+        <label class="toggle">
+            <input type="checkbox" class="toggle__input" name="my-toggle-disabled" disabled checked />
+            <span class="toggle__icon-label-container">
+                <span class="toggle__control">
+                    <div class="toggle__icon"></div>
+                </span>
+                <span class="toggle__label">My toggle On</span>
+            </span>
+        </label>
 
     </body>
 </html>

@@ -1,0 +1,117 @@
+.toggle {
+    width: min-content; /* don't change state on mouse click on empty space right after text, <label> div can be wide */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.toggle__input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.toggle__control {
+    width: 52px;
+    min-width: 52px;
+    height: 28px;
+    min-height: 28px;
+
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+}
+
+.toggle__icon-label-container {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.radio__icon {
+    display: none;
+    color: var(--blue-1);
+}
+
+.toggle__icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    box-sizing: border-box;
+
+    border-radius: 16px;
+}
+
+.toggle__label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--grey-4);
+
+    white-space: nowrap;
+}
+
+/*
+    There are more cases: 
+    - mouse over + primary mouse button hold states (seems to be easy)
+    - support RTL (flex should manage it)
+    - support ':' symbol (new 'div' and flex should manage it)
+*/
+
+/* focused */
+
+.toggle__input:focus ~ .toggle__icon-label-container .toggle__label {
+    text-decoration: underline;
+}
+
+/* NOT checked + enabled */
+
+.toggle__input:not(:checked) ~ .toggle__icon-label-container .toggle__control {
+    background: var(--white);
+
+    flex-direction: row;
+    padding-left: 1px;
+}
+
+.toggle__input:not(:checked) ~ .toggle__icon-label-container .toggle__control .toggle__icon {
+    background: var(--grey-2);
+}
+
+/* checked + enabled */
+
+.toggle__input:checked ~ .toggle__icon-label-container .toggle__control {
+    background: var(--blue-1);
+    border-color: var(--blue-1);
+
+    flex-direction: row-reverse;
+    padding-right: 1px;
+}
+
+.toggle__input:checked ~ .toggle__icon-label-container .toggle__control .toggle__icon {
+    background: var(--white);
+}
+
+/* NOT checked + NOT enabled */
+
+.toggle__input[disabled] ~ .toggle__icon-label-container {
+    cursor: not-allowed;
+}
+
+.toggle__input[disabled] ~ .toggle__icon-label-container .toggle__control {
+    background: var(--grey-2);
+    border-color: var(--grey-2);
+}
+
+.toggle__input[disabled] ~ .toggle__icon-label-container .toggle__control .toggle__icon {
+    background: var(--grey-3);
+}
