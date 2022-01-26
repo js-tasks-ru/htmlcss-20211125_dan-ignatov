@@ -1,6 +1,9 @@
 .radio {
-    display: inline-flex;
-    flex-direction: column;
+    width: min-content; /* don't change state on mouse click on empty space right after text, <label> div can be wide */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .radio__input {
@@ -58,7 +61,14 @@
     white-space: nowrap;
 }
 
-/* Selected/Disabled/Focused states */
+/*
+    Selected/Disabled/Focused states
+    There are more cases: 
+    - mouse over + primary mouse button hold states (seems to be easy)
+    - support RTL (flex should manage it)
+    - support ':' symbol (new 'div' and flex should manage it)
+    - support vertical alignment for 'label text' through several Form entries (don't know how to implement it)
+*/
 
 .radio__input:checked ~ .radio__icon-label-container .radio__control {
     border: none;
