@@ -1,0 +1,90 @@
+.radio {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.radio__input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.radio__control {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    min-height: 28px;
+
+    background: var(--white);
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+    OR same with "display: grid;"
+    OR position: relative;
+    +
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    */
+}
+
+.radio__icon-label-container {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.radio__icon {
+    display: none;
+    color: var(--blue-1);
+}
+
+.radio__label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--grey-4);
+
+    white-space: nowrap;
+}
+
+/* Selected/Disabled/Focused states */
+
+.radio__input:checked ~ .radio__icon-label-container .radio__control {
+    border: none;
+}
+
+.radio__input:checked ~ .radio__icon-label-container .radio__control .radio__icon {
+    display: inline;
+}
+
+.radio__input:focus ~ .radio__icon-label-container .radio__label {
+    text-decoration: underline;
+}
+
+.radio__input[disabled] ~ .radio__icon-label-container {
+    cursor: not-allowed;
+}
+
+.radio__input[disabled] ~ .radio__icon-label-container .radio__control {
+    background: var(--grey-2);
+    border-color: var(--grey-2);
+}
+
+.radio__input[disabled] ~ .radio__icon-label-container .radio__control .radio__icon {
+    color: var(--grey-3);
+}
+
+.radio__input[disabled] ~ .radio__icon-label-container .radio__label {
+    color: var(--grey-2);
+}

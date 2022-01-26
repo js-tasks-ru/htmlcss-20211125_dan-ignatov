@@ -5,7 +5,70 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./radio.css">
     </head>
-    <body>
+    <style>
+        .demo-container {
+            margin: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+    <body class="demo-container">
+
+        <h5>My radio:</h5>
+        <label class="radio">
+            <input type="radio" class="radio__input" name="my-radio" checked />
+            <span class="radio__icon-label-container">
+                <span class="radio__control">
+                    <svg class="radio__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="26" height="26" rx="13" stroke="currentColor" stroke-width="2"/>
+                        <rect x="5" y="5" width="18" height="18" rx="9" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="radio__label">My RadioButton Selected</span>
+            </span>
+        </label>
+
+        <label class="radio">
+            <input type="radio" class="radio__input" name="my-radio" />
+            <span class="radio__icon-label-container">
+                <span class="radio__control">
+                    <svg class="radio__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="26" height="26" rx="13" stroke="#4263EB" stroke-width="2"/>
+                        <rect x="5" y="5" width="18" height="18" rx="9" fill="#4263EB"/>
+                    </svg>
+                </span>
+                <span class="radio__label">My RadioButton Not Selected</span>
+            </span>
+        </label>
+
+        <h5>My radio disabled:</h5>
+        <label class="radio">
+            <input type="radio" class="radio__input" name="my-radio-disabled" checked disabled />
+            <span class="radio__icon-label-container">
+                <span class="radio__control">
+                    <svg class="radio__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="26" height="26" rx="13" stroke="currentColor" stroke-width="2"/>
+                        <rect x="5" y="5" width="18" height="18" rx="9" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="radio__label">My RadioButton Selected</span>
+            </span>
+        </label>
+
+        <label class="radio">
+            <input type="radio" class="radio__input" name="my-radio-disabled" disabled />
+            <span class="radio__icon-label-container">
+                <span class="radio__control">
+                    <svg class="radio__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="26" height="26" rx="13" stroke="currentColor" stroke-width="2"/>
+                        <rect x="5" y="5" width="18" height="18" rx="9" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="radio__label">My RadioButton Not Selected</span>
+            </span>
+        </label>
 
     </body>
 </html>
