@@ -96,7 +96,7 @@
     background: var(--white);
 }
 
-/* NOT checked + NOT enabled */
+/* NOT enabled */
 
 .toggle__input[disabled] ~ .toggle__icon-label-container {
     cursor: not-allowed;
