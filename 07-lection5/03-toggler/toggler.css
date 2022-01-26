@@ -34,11 +34,6 @@
     gap: 12px;
 }
 
-.radio__icon {
-    display: none;
-    color: var(--blue-1);
-}
-
 .toggle__icon {
     width: 24px;
     min-width: 24px;
