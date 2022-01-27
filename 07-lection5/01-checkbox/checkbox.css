@@ -72,6 +72,12 @@
     border-color: var(--blue-1);
 }
 
+.checkbox__input:not(:checked) ~ .checkbox__icon-label-container .checkbox__control .checkbox__icon {
+    /* TODO: why "display: none;" increases parent element height */
+    /* display: none; */
+    visibility: hidden;
+}
+
 .checkbox__input:focus ~ .checkbox__icon-label-container .checkbox__label {
     text-decoration: underline;
 }
@@ -87,8 +93,4 @@
 
 .checkbox__input[disabled] ~ .checkbox__icon-label-container .checkbox__label {
     color: var(--grey-2);
-}
-
-.checkbox__input[disabled]:not(:checked) ~ .checkbox__icon-label-container .checkbox__control .checkbox__icon {
-    display: none;
 }
