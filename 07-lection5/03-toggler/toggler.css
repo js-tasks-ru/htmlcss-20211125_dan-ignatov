@@ -1,6 +1,4 @@
 .toggle {
-    width: min-content; /* don't change state on mouse click on empty space right after text, <label> div can be wide */
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
