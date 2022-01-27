@@ -1,0 +1,96 @@
+.checkbox {
+    display: inline-flex;
+}
+
+.checkbox__input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.checkbox__control {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    min-height: 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+    OR same with "display: grid;"
+    OR position: relative;
+    +
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+}
+
+.checkbox__icon-label-container {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox__icon {
+}
+
+.checkbox__label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-4);
+
+    white-space: nowrap;
+}
+
+/*
+    Selected/Disabled/Focused states
+
+    There are more cases: 
+    - mouse over + primary mouse button hold states (seems to be easy)
+    - support RTL (flex should manage it)
+    - support ':' symbol (new 'div' and flex should manage it)
+*/
+
+.checkbox__input:checked ~ .checkbox__icon-label-container .checkbox__control {
+    background: var(--blue-1);
+    border-color: var(--blue-1);
+}
+
+.checkbox__input:not(:checked) ~ .checkbox__icon-label-container .checkbox__control .checkbox__icon {
+    /* TODO: why "display: none;" increases parent element height */
+    /* display: none; */
+    visibility: hidden;
+}
+
+.checkbox__input:focus ~ .checkbox__icon-label-container .checkbox__label {
+    text-decoration: underline;
+}
+
+.checkbox__input[disabled] ~ .checkbox__icon-label-container {
+    cursor: not-allowed;
+}
+
+.checkbox__input[disabled] ~ .checkbox__icon-label-container .checkbox__control {
+    background: var(--grey-2);
+    border-color: var(--grey-2);
+}
+
+.checkbox__input[disabled] ~ .checkbox__icon-label-container .checkbox__label {
+    color: var(--grey-2);
+}
