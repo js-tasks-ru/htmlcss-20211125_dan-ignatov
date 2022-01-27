@@ -1,6 +1,5 @@
 .checkbox {
     display: inline-flex;
-    flex-direction: column;
 }
 
 .checkbox__input {
