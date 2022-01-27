@@ -14,7 +14,6 @@
     min-height: 28px;
 
     background: var(--white);
-    border: 1px solid var(--grey-2);
     box-sizing: border-box;
     border-radius: 14px;
 
@@ -41,8 +40,6 @@
 }
 
 .radio__icon {
-    display: none;
-    color: var(--blue-1);
 }
 
 .radio__label {
@@ -63,20 +60,36 @@
     - mouse over + primary mouse button hold states (seems to be easy)
     - support RTL (flex should manage it)
     - support ':' symbol (new 'div' and flex should manage it)
-    - support vertical alignment for 'label text' through several Form entries (don't know how to implement it)
 */
+
+/* focused */
+
+.radio__input:focus ~ .radio__icon-label-container .radio__label {
+    text-decoration: underline;
+}
+
+/* checked */
 
 .radio__input:checked ~ .radio__icon-label-container .radio__control {
     border: none;
 }
 
 .radio__input:checked ~ .radio__icon-label-container .radio__control .radio__icon {
-    display: inline;
+    display: inherit;
+    color: var(--blue-1);
 }
 
-.radio__input:focus ~ .radio__icon-label-container .radio__label {
-    text-decoration: underline;
+/* NOT checked */
+
+.radio__input:not(:checked) ~ .radio__icon-label-container .radio__control {
+    border: 1px solid var(--grey-2);
 }
+
+.radio__input:not(:checked) ~ .radio__icon-label-container .radio__control .radio__icon {
+    display: none;
+}
+
+/* NOT enabled */
 
 .radio__input[disabled] ~ .radio__icon-label-container {
     cursor: not-allowed;
@@ -84,7 +97,7 @@
 
 .radio__input[disabled] ~ .radio__icon-label-container .radio__control {
     background: var(--grey-2);
-    border-color: var(--grey-2);
+    border: none;
 }
 
 .radio__input[disabled] ~ .radio__icon-label-container .radio__control .radio__icon {
