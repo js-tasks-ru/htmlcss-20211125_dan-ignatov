@@ -1,6 +1,4 @@
 .checkbox {
-    width: min-content; /* don't change state on mouse click on empty space right after text, <label> div can be wide */
-
     display: inline-flex;
     flex-direction: column;
 }
