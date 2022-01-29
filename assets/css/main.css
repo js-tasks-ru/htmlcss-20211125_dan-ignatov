@@ -74,6 +74,12 @@ body {
 }
 
 .align-page-roots {
-    max-width: 1110px;
-    margin: 0 auto;
+    padding: 0 16px 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .align-page-roots {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
 }

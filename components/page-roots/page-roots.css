@@ -7,8 +7,8 @@
 }
 
 .page-roots__header {
-    padding-top: 48px;  /* 96px in Figma but it is too large and immediately force scrollbar in Main to be visible */
-    padding-bottom: 38px;   /* 77px in Figma but it is too large and immediately force scrollbar in Main to be visible */
+    display: flex;
+    flex-direction: row;
 }
 
 .page-roots__header_white-background {
@@ -18,7 +18,7 @@
 .page-roots__main {
     flex-grow: 1;
 
-    padding: 36px 0 56px 0;
+    padding: 22px 0 22px 0;
 
     display: flex;
     flex-direction: column;
@@ -35,17 +35,32 @@
 }
 
 .page-roots__footer {
-    padding: 18px 0 18px 0;   /* 72px in Figma but it is too large and immediately force scrollbar in Main to be visible */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
 }
 
-.page-roots__footer_white-background {
-    background: var(--white);
-}
+@media screen and (min-width: 768px) {
+    .page-roots__header {
+        padding-top: 48px;
+        padding-bottom: 38px;
+    }
 
-.page-roots__footer_grey-background {
-    background: var(--grey-6);
+    .page-roots__main {
+        padding: 36px 0 56px 0;
+    }    
+
+    .page-roots__footer {
+        padding: 18px 0 18px 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .page-roots__footer_white-background {
+        background: var(--white);
+    }
+    
+    .page-roots__footer_grey-background {
+        background: var(--grey-6);
+    }
 }

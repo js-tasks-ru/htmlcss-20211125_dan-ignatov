@@ -1,7 +1,28 @@
 .card-view {
-    /* core properties */
-    display:flex;
+    flex-grow: 1;
+
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card-view__item {    
+    width: 164px;
+    min-width: 164px;
+    height: 200px;
+
+    background: #FFFFFF;
+
+    border: 1px solid black;
+    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .card-view__item {
+        width: 300px;
+        border: 1px solid black;
+    }
 }

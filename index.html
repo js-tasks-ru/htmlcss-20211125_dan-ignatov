@@ -3,6 +3,8 @@
 <html lang="ru">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./assets/css/main.css">
 
     <link rel="stylesheet" href="./components/page-roots/page-roots.css">
@@ -17,21 +19,34 @@
     <div class="page-roots">
         <header class="page-roots__header page-roots__header_white-background">
             <div class="page-root-header align-page-roots">
-                <div class="page-root-header__title">
+                <div class="page-root-header__row1">
+                    <div class="page-root-header__menu_button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="page-root-header__logo">
+                        <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="1" width="30" height="30" fill="#212429"/>
+                            <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                            <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="page-root-header__text">
                     Reusable component library
                 </div>
             </div>
         </header>
         <main class="page-roots__main page-roots__main_show-borders page-roots__main_grey-background">
             <div class="page-index-main align-page-roots">
-                <nav class="header__navigation">
-                    [ All components | Elements | Containers | Templates ]
-                </nav>
                 <div class="card-view">
-                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 1</div>
-                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 2</div>
-                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 3</div>
-                    <div style="height: 200px; width: 300px; border: 1px solid black;">Card 4</div>
+                    <div class="card-view__item">Card 1</div>
+                    <div class="card-view__item">Card 2</div>
+                    <div class="card-view__item">Card 3</div>
+                    <div class="card-view__item">Card 4</div>
                 </div>
             </div>
         </main>
