@@ -1,25 +1,3 @@
-/*
-    Example:
-
-    <div class="page-template-navigation">
-        <h4 class="page-template-navigation__caption">
-            My Caption
-        </h4>
-        <div class="page-template-navigation__item">
-            Item 1
-        </div>
-        <div class="page-template-navigation__item">
-            Item 2
-        </div>
-        <div class="page-template-navigation__item page-template-navigation__item_selected">
-            Selected Item
-        </div>
-        <div class="page-template-navigation__item page-template-navigation__item_mainPage">
-            Main Page Item
-        </div>
-    </div>
-*/
-
 .page-template-navigation {
     /* align children */
     display: flex;
