@@ -1,4 +1,4 @@
-.page-template-main {
+.page-roots-main {
     flex-grow: 1;
     
     /* align children */
@@ -6,12 +6,12 @@
     flex-direction: row;
 }
 
-.page-template-main__navigation {
+.page-roots-main__navigation {
     align-self: flex-start;
     width: 229px;
 }
 
-.page-template-main__navigation-item-content {
+.page-roots-main__navigation-item-content {
     flex-grow: 1;
     align-self: stretch;
     width: 825px;
