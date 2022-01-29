@@ -1,10 +1,10 @@
-.page-roots-navigation {
+.page-template-navigation {
     /* align children */
     display: flex;
     flex-direction: column;
 }
 
-.page-roots-navigation__caption {
+.page-template-navigation__caption {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -17,7 +17,7 @@
     margin-bottom: 16px;
 }
 
-.page-roots-navigation__item {
+.page-template-navigation__item {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -27,11 +27,11 @@
     color: var(--black);
 }
 
-.page-roots-navigation__item_selected {
+.page-template-navigation__item_selected {
     color: var(--red-1);
 }
 
-.page-roots-navigation__item_mainPage {
+.page-template-navigation__item_mainPage {
     /* additional space between items and the MainPage link */
     margin-top: 30px;
 }
