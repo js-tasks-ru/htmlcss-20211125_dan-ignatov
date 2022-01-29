@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta name="viewport" content="width=400px, initial-scale=1.0">
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="./srcset.css">
+    </head>
+    <style>
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+    <body>
+        <h1>
+            <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">
+                Responsive images
+            </a>
+        </h1>
+
+        <h2>
+            Select image quality depending on the viewport size:
+        </h2>
+        <div>
+            <img srcset="
+                    ./public/ext_small.jpg 480w,
+                    ./public/ext_large.jpg 800w"
+                sizes="
+                    (max-width: 480px) 440px,
+                    800px"
+                src="
+                    ./public/ext_large.jpg"
+                alt="VSCode extensions">
+        </div>
+
+        <h2>
+            Select image content depending on the viewport size:
+        </h2>
+        <picture>
+            <source media="(max-width: 799px)" srcset="./public/ext2_small.jpg">
+            <source media="(min-width: 800px)" srcset="./public/ext2_large.jpg">
+            <img src="./public/ext2_small.jpg"
+                alt="GitLens extension">
+        </picture>
+    </body>
+</html>

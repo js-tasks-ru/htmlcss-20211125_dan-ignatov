@@ -5,6 +5,17 @@
         <link rel="stylesheet" href="./srcset.css">
     </head>
     <body>
-
+        <div class="srcset">
+            <!-- 
+                - forest_768 is used when browser scale >=150% on desktop
+                - https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel
+                - https://web.dev/codelab-density-descriptors/
+                - https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+            -->
+            <img alt="" src="./public/forest_400.jpg"
+                srcset="./public/forest_400.jpg 1x,
+                        ./public/forest_768.jpg 2x"
+            />
+        </div>
     </body>
 </html>
