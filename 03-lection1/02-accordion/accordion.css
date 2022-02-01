@@ -10,7 +10,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    --itemSummaryOpenCloseButtonWidth: 18px;
+    --itemSummaryOpenCloseButtonWidth: 24px;
     --itemSummaryToContentSpace: 16px;
 }
 
@@ -81,13 +81,24 @@
         align-items: center;
     }
 
-    .accordion__itemSummary::after {
-        content: url("data:image/svg+xml;utf8,<svg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L9 9L17 1' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Что бы не было зависимости от размера картинки svg width='18' */
+    .accordion__itemSummaryOpenClose {    
         width: var(--itemSummaryOpenCloseButtonWidth);
+        height: 24px
+        
+        /*
+        .accordion__itemSummary::after {
+            так браузер не показал картинку из моего спрайта
+            content: url("../../assets/images/svg-defs.svg#arrowBottom");
+        }
+        */
+        
+        /*
+        https://codepen.io/vixxofsweden/pen/dyyjNOB - тут использован background-image и браузер его показывает
+        .accordion__itemSummary::after {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/Icon-arrow.fi.svg#primary");
+            но картинку из моего спрайта браузер не показал
+        }
+        */
     }
 
     /*
@@ -100,7 +111,7 @@
         padding-bottom: var(--itemSummaryToContentSpace);
     }
     
-    .accordion__item[open] > .accordion__itemSummary::after {
+    .accordion__item[open] > .accordion__itemSummary > .accordion__itemSummaryOpenClose {
         transform: rotateX(180deg);
     }
 
