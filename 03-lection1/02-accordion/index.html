@@ -12,6 +12,14 @@
         <details open class="accordion__item">
             <summary class="accordion__itemSummary">
                 Accordion item 1
+                <!--
+                    OR: SVG sprite + ::after + background-image = https://codepen.io/vixxofsweden/pen/dyyjNOB
+                    .accordion__itemSummary::after {
+                        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/Icon-arrow.fi.svg#primary");
+                -->
+                <svg class="accordion__itemSummaryOpenClose" >
+                    <use href="../../assets/images/svg-defs.svg#arrowBottom" />
+                </svg>
             </summary>
             <div class="accordion__itemContent">
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
@@ -21,6 +29,9 @@
         <details class="accordion__item">
             <summary class="accordion__itemSummary">
                 Accordion item 2
+                <svg class="accordion__itemSummaryOpenClose" >
+                    <use href="../../assets/images/svg-defs.svg#arrowBottom" />
+                </svg>
             </summary>
             <div class="accordion__itemContent">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -29,6 +40,9 @@
         <details class="accordion__item">
             <summary class="accordion__itemSummary">
                 Accordion item 3
+                <svg class="accordion__itemSummaryOpenClose" >
+                    <use href="../../assets/images/svg-defs.svg#arrowBottom" />
+                </svg>
             </summary>
             <div class="accordion__itemContent"></div>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas tempore tenetur ipsam culpa deleniti
