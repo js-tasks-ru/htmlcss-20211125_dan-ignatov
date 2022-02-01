@@ -38,6 +38,8 @@ Enhancements:
     left: calc(100% - 15px);
     top: 15px;
     transform: translate(-100%);
+    width: 16px;
+    height: 16px;
 
     cursor: pointer;
 }
