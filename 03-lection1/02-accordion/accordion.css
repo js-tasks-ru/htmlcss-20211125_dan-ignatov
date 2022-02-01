@@ -95,8 +95,8 @@
         /*
         https://codepen.io/vixxofsweden/pen/dyyjNOB - тут использован background-image и браузер его показывает
         .accordion__itemSummary::after {
-            но картинку из моего спрайта браузер не показал
             background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/Icon-arrow.fi.svg#primary");
+            но картинку из моего спрайта браузер не показал
         }
         */
     }
