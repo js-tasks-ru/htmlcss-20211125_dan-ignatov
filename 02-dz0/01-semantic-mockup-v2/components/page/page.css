@@ -1,0 +1,31 @@
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr max-content;
+    /* https://habr.com/ru/post/500580/ */
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.page__header-placeholder {
+    grid-area: header;
+}
+
+.page__main-placeholder {
+    grid-area: main;
+}
+
+.page__main-placeholder_grey {
+    background-color: var(--grey-1);
+}
+
+.page__main-placeholder_borders {
+    border-top: 1px solid var(--grey-2);
+    border-bottom: 1px solid var(--grey-2);
+}
+
+.page__footer-placeholder {
+    grid-area: footer;
+}

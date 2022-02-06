@@ -1,0 +1,16 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-footer__title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-footer__details {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+}

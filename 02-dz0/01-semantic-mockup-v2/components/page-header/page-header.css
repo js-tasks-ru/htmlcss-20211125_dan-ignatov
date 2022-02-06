@@ -1,0 +1,36 @@
+.page-header {
+    margin-top: 24px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr max-content max-content;
+    grid-template-areas:
+        "logo  navigation theme-toggle"
+        "title title      title";
+}
+
+.page-header__logo-placeholder {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__navigation-placeholder {
+    grid-area: navigation;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__theme-toggle-placeholder {
+    grid-area: theme-toggle;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__title-placeholder {
+    grid-area: title;
+}
+
+.header__title {
+    margin: 0;
+}

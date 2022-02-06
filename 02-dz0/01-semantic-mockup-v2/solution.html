@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    
+    <link rel="stylesheet" href="./components/page/page.css">
+    <link rel="stylesheet" href="./components/page-header/page-header.css">
+    <link rel="stylesheet" href="./components/page-footer/page-footer.css">
+
+    <link rel="stylesheet" href="./components/align-page-roots/align-page-roots.css">
+
+    <link rel="stylesheet" href="./components/navigation/navigation.css">
+
+    <link rel="stylesheet" href="./components/article/article.css">
+</head>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        height: 100vh;
+    }
+</style>
+<body class="page">
+    <div class="page__header-placeholder">
+        <div class="align-page-roots">
+            <div class="page-header">
+                <div class="page-header__logo-placeholder">
+                    <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="30" height="30" fill="#212429"/>
+                        <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                        <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                    </svg>
+                </div>
+                <div class="page-header__navigation-placeholder">
+                    <nav class="navigation">
+                        <a href="#">Articles</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+                <div class="page-header__theme-toggle-placeholder">
+                    <svg width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="white" stroke="#ACB5BD"/>
+                        <rect x="2" y="2" width="24" height="24" rx="12" fill="#ACB5BD"/>
+                    </svg>
+                </div>
+                <header class="page-header__title-placeholder">
+                    <h1 class="page-header__title">Reusable component library</h1>
+                </header>
+            </div>
+        </div>
+    </div>
+    <main class="page__main-placeholder page__main-placeholder_grey page__main-placeholder_borders">
+        <div class="align-page-roots">
+            <article class="article">
+                <h2 class="article__title">Article 1</h2>
+                <ul class="article__items">
+                    <li>Оригинальная трилогия</li>
+                    <li>Трилогия приквелов</li>
+                    <li>Трилогия сиквелов</li>
+                </ul>
+            </article>
+            <article class="article">
+                <h2 class="article__title">Article 2</h2>
+                <ol class="article__items">
+                    <li>Эпизод IV — Новая надежда</li>
+                    <li>Эпизод V — Империя наносит ответный удар</li>
+                    <li>Эпизод VI — Возвращение джедая</li>
+                </ol>
+            </article>
+        </div>
+    </main>
+    <footer class="page__footer-placeholder">
+        <div class="page-footer">
+            <h2 class="page-footer__title">About</h2>
+            <div class="page-footer__details">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
