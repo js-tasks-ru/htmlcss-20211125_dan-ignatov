@@ -5,6 +5,20 @@
     /* https://habr.com/ru/post/500580/ */
 }
 
+/*
+page__content-placeholder/page__content-placeholder/page__footer-placeholder еще будут нужны для задания background-color на всю ширину UA
+*/
+
+.page__header-placeholder {
+    /* отступы от границ UA для любых внутренних DOM элементов */
+    padding-top: 24px;
+    padding: 0 16px 0 16px;
+}
+
+.page__content-placeholder {
+    padding: 0 16px 0 16px;
+}
+
 .page__content-placeholder_grey {
     background-color: var(--grey-1);
 }

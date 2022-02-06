@@ -1,6 +1,4 @@
 .page-header {
-    margin-top: 24px;
-
     display: grid;
     align-items: center;
     grid-template-columns: 1fr max-content max-content;
