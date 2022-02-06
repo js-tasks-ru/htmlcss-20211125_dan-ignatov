@@ -9,18 +9,24 @@
 
 .page-header__logo-placeholder {
     grid-area: logo;
+
+    /* центрировать по вертикали дочерний DOM элемент */
     display: flex;
     align-items: center;
 }
 
 .page-header__navigation-placeholder {
     grid-area: navigation;
+
+    /* центрировать по вертикали дочерний DOM элемент */
     display: flex;
     align-items: center;
 }
 
 .page-header__theme-toggle-placeholder {
     grid-area: theme-toggle;
+
+    /* центрировать по вертикали дочерний DOM элемент */
     display: flex;
     align-items: center;
 }
