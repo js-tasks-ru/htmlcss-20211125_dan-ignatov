@@ -1,4 +1,7 @@
 .page {
+    /* согласованные отступы от границ UA для любых внутренних DOM элементов */
+    --leftRightPagePadding: 0 16px 0 16px;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: max-content 1fr max-content;
@@ -7,16 +10,16 @@
 
 /*
 page__content-placeholder/page__content-placeholder/page__footer-placeholder еще будут нужны для задания background-color на всю ширину UA
+отступы именно через paddings что бы был back color от края до края
 */
 
 .page__header-placeholder {
-    /* отступы от границ UA для любых внутренних DOM элементов */
+    padding: var(--leftRightPagePadding);
     padding-top: 24px;
-    padding: 0 16px 0 16px;
 }
 
 .page__content-placeholder {
-    padding: 0 16px 0 16px;
+     padding: var(--leftRightPagePadding);
 }
 
 .page__content-placeholder_grey {
@@ -26,4 +29,8 @@ page__content-placeholder/page__content-placeholder/page__footer-placeholder е�
 .page__content-placeholder_borders {
     border-top: 1px solid var(--grey-2);
     border-bottom: 1px solid var(--grey-2);
+}
+
+.page__footer-placeholder {
+    padding: var(--leftRightPagePadding);
 }
