@@ -30,7 +30,3 @@ page__content-placeholder/page__content-placeholder/page__footer-placeholder ะตั
     border-top: 1px solid var(--grey-2);
     border-bottom: 1px solid var(--grey-2);
 }
-
-.page__footer-placeholder {
-    padding: var(--leftRightPagePadding);
-}
