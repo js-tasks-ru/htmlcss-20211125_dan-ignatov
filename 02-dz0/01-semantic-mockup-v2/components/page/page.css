@@ -1,27 +1,9 @@
 .page {
-    /* согласованные отступы от границ UA для любых внутренних DOM элементов */
+    /* минимальные отступы от границ UA, будет использовано в дочерних компонентах */
     --leftRightPagePadding: 0 16px 0 16px;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: max-content 1fr max-content;
     /* https://habr.com/ru/post/500580/ */
-}
-
-/*
-page__content-placeholder/page__content-placeholder/page__footer-placeholder еще будут нужны для задания background-color на всю ширину UA
-отступы именно через paddings что бы был back color от края до края
-*/
-
-.page__content-placeholder {
-     padding: var(--leftRightPagePadding);
-}
-
-.page__content-placeholder_grey {
-    background-color: var(--grey-1);
-}
-
-.page__content-placeholder_borders {
-    border-top: 1px solid var(--grey-2);
-    border-bottom: 1px solid var(--grey-2);
 }

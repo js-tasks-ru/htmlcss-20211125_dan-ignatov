@@ -1,0 +1,13 @@
+.page-content {
+    /* отступы именно через paddings что бы был back color от края до края */
+    padding: var(--leftRightPagePadding);
+}
+
+.page-content_grey {
+   background-color: var(--grey-1);
+}
+
+.page-content_borders {
+   border-top: 1px solid var(--grey-2);
+   border-bottom: 1px solid var(--grey-2);
+}
