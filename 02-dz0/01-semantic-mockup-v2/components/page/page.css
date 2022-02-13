@@ -13,11 +13,6 @@ page__content-placeholder/page__content-placeholder/page__footer-placeholder е�
 отступы именно через paddings что бы был back color от края до края
 */
 
-.page__header-placeholder {
-    padding: var(--leftRightPagePadding);
-    padding-top: 24px;
-}
-
 .page__content-placeholder {
      padding: var(--leftRightPagePadding);
 }

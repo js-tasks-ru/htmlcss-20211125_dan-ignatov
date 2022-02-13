@@ -1,4 +1,9 @@
 .page-header {
+    padding: var(--leftRightPagePadding);
+    padding-top: 24px;
+}
+
+.page-header__inner {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr max-content max-content;
